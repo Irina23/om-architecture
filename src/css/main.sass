@@ -1,0 +1,2384 @@
+$main-color: #1c1c1c
+
+
+@font-face
+  font-family: "SegoeUILight"
+  src: url("../fonts/SegoeUI-Light.eot")
+  src: url("../fonts/SegoeUI-Light.eot?#iefix")format("embedded-opentype"),url("../fonts/SegoeUI-Light.woff") format("woff"),url("../fonts/SegoeUI-Light.ttf") format("truetype")
+  font-style: normal
+  font-weight: normal
+
+@font-face
+  font-family: "SegoeUI"
+  src: url("../fonts/SegoeUI.eot")
+  src: url("../fonts/SegoeUI.eot?#iefix")format("embedded-opentype"),url("../fonts/SegoeUI.woff") format("woff"),url("../fonts/SegoeUI.ttf") format("truetype")
+  font-style: normal
+  font-weight: normal
+
+
+@font-face
+  font-family: "SegoeUI-Semibold"
+  src: url("../fonts/SegoeUI-SemiBold.eot")
+  src: url("../fonts/SegoeUI-SemiBold.eot?#iefix")format("embedded-opentype"),url("../fonts/SegoeUI-SemiBold.woff") format("woff"),url("../fonts/SegoeUI-SemiBold.ttf") format("truetype")
+  font-style: normal
+  font-weight: normal
+
+
+
+
+
+
+
+body
+  font-family: "SegoeUI", sans-serif
+  padding: 0
+  margin: 0
+  line-height: 1em
+  font-size: 14px
+
+.img-holder
+  overflow: hidden
+  height: 100%
+img
+   max-width: 100%
+.wrap
+  width: 940px
+  margin: auto
+header
+
+  padding-top: 50px
+  padding-bottom: 60px
+
+
+  .logo
+      display: inline-block
+      vertical-align: middle
+      width: 200px
+
+      margin-right: 125px
+
+  .social
+      display: inline-block
+      vertical-align: middle
+      margin-right: 110px
+      li
+        display: inline-block
+        width: 24px
+        height: 23px
+        margin-right: 45px
+        a
+          background: url("../img/icons/social.png") no-repeat top left
+          display: block
+          width: 23px
+          height: 23px
+          background-size: 100%
+          &:hover
+            background-position: 0 -69px
+
+        &.facebook
+            a
+              background-position: 0 -23px
+              &:hover
+                background-position: 0 -92px
+        &.instagram
+
+            a
+              background-position: 0 -46px
+
+              &:hover
+                background-position: bottom right
+        &:last-child
+            margin-right: 0
+
+
+  .lang
+      display: inline-block
+      vertical-align: middle
+      margin-right: 115px
+
+      li
+        display: inline-block
+        vertical-align: middle
+        margin-right: 50px
+        &:last-child
+          margin-right: 0
+        &.active
+          a
+            background: #ffe400
+            color: #000000
+            &:hover
+              color: #000000
+              text-decoration: none
+
+        a
+          line-height: 20px
+          color: #FFFFFF
+          font-size: 14px
+          font-family: "SegoeUILight", sans-serif
+          width: 25px
+          text-transform: uppercase
+          text-align: center
+          display: block
+          &:hover
+            color: #ffe400
+
+
+  .cart
+      display: inline-block
+      vertical-align: middle
+      //float: right
+      //margin-top: 20px
+      a
+        display: block
+        background: url("../img/icons/cart.png") no-repeat
+        background-size: 100%
+        transition: all 0.35s
+        width: 25px
+        height: 28px
+        color: #030303
+        font-size: 20px
+        font-family: "SegoeUI", sans-serif
+        text-align: center
+        line-height: 32px
+        &:hover
+          text-decoration: none
+          background: url("../img/icons/cart_hover.png") no-repeat
+          background-size: 100%
+          transition: all 0.35s
+
+
+
+  .menu
+      margin-top: 50px
+
+      ul
+        display: table
+        width: 100%
+
+
+
+      li
+        list-style: none
+        text-align: center
+        //display: inline-block
+        display: table-cell
+        //margin-right: 78px
+        //min-width: 130px
+        padding: 0 20px
+        &:first-child
+          text-align: left
+          padding: 0
+        &:last-child
+          //margin-right: 0
+          //text-align: left
+          text-align: right
+          padding: 0
+        &.active
+          a
+            color: #ffe400
+            text-decoration: none
+        a
+          color: #fff
+          font-size: 18px
+          line-height: 1em
+          font-family: "SegoeUILight", sans-serif
+
+
+          &:hover
+            color: #ffe400
+            text-decoration: none
+
+
+
+
+
+
+
+footer
+  background: url("../img/bg/bg_footer.jpg") repeat-x
+  background-position: 50% 100%
+  padding-top: 65px
+  padding-bottom: 20px
+  color: #fff
+  .wrap
+    > div
+      display: inline-block
+      vertical-align: top
+      width: 220px
+      overflow: hidden
+      h3
+        color: #ffe400
+        font-size: 18px
+        line-height: 1em
+        font-family: "SegoeUI", sans-serif
+        margin-bottom: 15px
+        font-weight: normal
+
+
+      ul
+        li
+          font-size: 16px
+          line-height: 1.3em
+
+
+      .call_us
+        ul
+          li
+            margin-bottom: 15px
+          a
+            color: #FFFFFF
+            &:hover
+              color: #ffe400
+              text-decoration: none
+
+
+
+      .social
+        display: inline-block
+        vertical-align: middle
+        margin-bottom: 30px
+        li
+          display: inline-block
+          width: 24px
+          height: 23px
+          margin-right: 20px
+          a
+            background: url("../img/icons/social.png") no-repeat top left
+            display: block
+            width: 23px
+            height: 23px
+            background-size: 100%
+            &:hover
+              background-position: 0 -69px
+
+          &.facebook
+            a
+              background-position: 0 -23px
+              &:hover
+                background-position: 0 -92px
+          &.instagram
+
+            a
+              background-position: 0 -46px
+
+              &:hover
+                background-position: bottom right
+          &:last-child
+            margin-right: 0
+
+
+    .adress
+        width: 235px
+        //margin: auto 165px
+        margin:  auto 125px
+
+
+        ul
+          li
+            margin-bottom: 30px
+
+
+
+
+    .subscription
+      margin-bottom: 20px
+      h3
+        margin-bottom: 20px
+      .error
+        input
+          border-color: #ee2115
+      .subscription_mail
+        position: relative
+      input
+        background: none
+        border: 1px solid #fff
+        width: 220px
+        height: 35px
+        box-sizing: border-box
+        padding: 0 33px 0 10px
+        color: #FFF
+        + button
+          opacity: 0
+
+        &:focus
+          + button
+            //display: block
+            opacity: 1
+
+
+        &::-webkit-input-placeholder, &:-moz-placeholder, &::-moz-placeholder, &:-ms-input-placeholder
+              color: #fff
+      button
+          border: none
+          background: url("../img/icons/email.png") no-repeat
+          background-size: 100%
+          position: absolute
+          right: 8px
+          top: 8px
+          width: 25px
+          height: 20px
+          //transition: all 0.35s
+          &:hover
+            background: url("../img/icons/email_hover.png") no-repeat
+            background-size: 100%
+            //transition: all 0.35s
+
+
+    .payment
+      width: 220px
+      ul
+        li
+          height: 17px
+          width: 28px
+          display: inline-block
+          vertical-align: middle
+          background: url("../img/icons/master_card.png") no-repeat
+          margin-right: 24px
+          a
+            display: block
+            height: 17px
+            color: #FFFFFF
+            background: url("../img/icons/master_card.png") no-repeat
+            -webkit-transition: all 0.35s
+            -moz-transition: all 0.35s
+            -o-transition: all 0.35s
+            transition: all 0.35s
+            &:hover
+              background: url("../img/icons/master_card_hover.png") no-repeat
+              -webkit-transition: all 0.35s
+              -moz-transition: all 0.35s
+              -o-transition: all 0.35s
+              transition: all 0.35s
+
+
+
+          &.privat
+            background-position: -55px 0
+            width: 15px
+            a
+              background-position: -55px 0
+              &:hover
+                background-position: -55px 0
+
+          &.visa
+            background-position: -100px 0
+            width: 35px
+            a
+              background-position: -100px 0
+              &:hover
+                background-position: -100px 0
+
+          &.paypal
+            display: none
+
+            width: 58px
+            margin-right: 0
+            background-position: top right
+            a
+              background-position: top right
+              &:hover
+                background-position: top right
+
+
+  .copyright
+    font-family: "SegoeUILight", sans-serif
+    color:  #fefefe
+    font-size: 14px
+    a
+      display: block
+      margin-top: 10px
+      line-height: 1em
+      &:hover
+        text-decoration: none
+        color: #ffe400
+
+
+
+.popular_product
+  h3
+    text-align: center
+    line-height: 1em
+    font-size: 30px
+    color: #191919
+    margin-bottom: 70px
+    font-weight: normal
+    font-family: "SegoeUI", sans-serif
+
+  .products
+    margin: 0 -10px
+    text-align: center
+    .product
+      display: inline-block
+      vertical-align: top
+      margin: 0 8px 20px
+      width: 300px
+      height: 350px
+      overflow: hidden
+      a
+        display: block
+        position: relative
+        height: 350px
+        width: 300px
+        overflow: hidden
+        .images
+          position: relative
+          height: 100%
+          img
+            height: 100%
+            max-width: inherit
+
+          &:before
+              background:  rgba(255, 228, 0, 0.71)
+              position: absolute
+              content: ''
+              top: 0
+              left: 0
+              height: 100%
+              width: 100%
+              transition: all .3s
+              opacity: 0
+          &:after
+            background:  url("../img/icons/product_hover.png") no-repeat center
+            position: absolute
+            content: ''
+            top: 50%
+            left: 50%
+            height: 45px
+            width: 45px
+            opacity: 0
+            transform: translateY(30px)
+            transition: all .3s ease-in
+            margin-top: -22px
+            margin-left: -22px
+
+        &:hover
+          .images
+            &:before
+              opacity: 1
+              transition: all .3s
+            &:after
+                opacity: 1
+                transform: translateY(0px)
+                transition: all .3s ease-out
+
+
+
+
+
+
+
+.slider
+  margin-bottom: 100px
+  height: 625px
+  overflow: hidden
+
+
+  li
+    height: 625px
+  .owl-controls
+    position: relative
+    z-index: 10
+    bottom: 30px
+  .owl-dots
+    text-align: center
+    .owl-dot
+        display: inline-block
+        vertical-align: middle
+        margin: auto 5px
+        &.active
+          span
+            &:after
+
+              top: 2px
+              left: 2px
+              width: 12px
+              height: 12px
+              border-radius: 12px
+
+        span
+            width: 20px
+            height: 20px
+            border-radius: 20px
+            position: relative
+            display: block
+            border: 2px solid #a3a2a2
+            padding: 2px
+            box-sizing: border-box
+
+            &:after
+              position: absolute
+              top: -2px
+              left: -2px
+              width: 20px
+              height: 20px
+              background: #a3a2a2
+              content: ''
+              display: block
+              border-radius: 20px
+
+
+.container
+  position: relative
+  
+  
+.page_wrapper
+  position: relative
+  header
+    background: url("../img/bg/bg_header.jpg") repeat-x
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+  &.home
+    header
+      height: 600px
+
+
+    .container
+
+      top: -355px
+      margin-bottom: -500px
+
+
+    footer
+      padding-top: 210px
+  &.shop
+    header
+      height: 600px
+
+    .container
+      top: -350px
+      margin-bottom: -350px
+
+
+
+.list_products
+    text-align: center
+    margin: auto -10px
+    .product
+      display: inline-block
+      vertical-align: top
+      margin: 0 8px 90px
+      width: 300px
+
+
+      a
+        display: block
+        position: relative
+        text-align: left
+        .images
+          position: relative
+          margin-bottom: 10px
+          width: 100%
+          height: 350px
+          img
+            max-width: inherit
+            width: auto
+            height: 100%
+          &:before
+            background:  rgba(255, 228, 0, 0.71)
+            position: absolute
+            content: ''
+            top: 0
+            left: 0
+            height: 100%
+            width: 100%
+            transition: all .3s
+            opacity: 0
+          &:after
+            background:  url("../img/icons/product_hover.png") no-repeat center
+            position: absolute
+            content: ''
+            top: 50%
+            left: 50%
+            height: 45px
+            width: 45px
+            opacity: 0
+            transform: translateY(30px)
+            transition: all .3s ease-in
+            margin-top: -22px
+            margin-left: -22px
+
+
+
+        .product_name
+          font-size: 20px
+          line-height: 1.3em
+          font-family: "SegoeUILight", sans-serif
+          color: #000
+          margin-bottom: 20px
+          text-overflow: ellipsis
+          white-space: nowrap
+          overflow: hidden
+        .price
+          font-size: 20px
+          line-height: 1em
+          font-family: "SegoeUI-Semibold", sans-serif
+          color: #000
+
+
+        &:hover
+          text-decoration: none
+          .product_name
+            color: #e3cc0a
+
+          .images
+            &:before
+              opacity: 1
+              transition: all .3s
+            &:after
+              opacity: 1
+              transform: translateY(0px)
+              transition: all .3s ease-out
+
+
+
+.pagination
+  text-align: center
+  margin-bottom: 150px
+  clear: both
+
+  li
+      width: 57px
+      height: 17px
+      display: inline-block
+      vertical-align: top
+      &.disabled
+        a
+          opacity: 0.7
+          &:hover
+            opacity: 0.7
+
+            filter: brightness(0.1)
+
+      &.prev
+        margin-right: 140px
+        a
+          transform: rotate(180deg)
+
+      a
+        display: block
+        height: 17px
+        background: url("../img/icons/pagination.png") no-repeat
+        background-size: contain
+
+        filter: brightness(0.1)
+
+
+        &:hover
+
+            filter: none
+            opacity: 1
+
+
+
+
+
+
+
+
+.categories
+
+  text-align: center
+  margin: auto -10px 130px
+  .category
+    display: inline-block
+    vertical-align: top
+    margin: 0 8px 20px
+    width: 300px
+    height: 350px
+    overflow: hidden
+    position: relative
+
+
+
+    a
+      display: block
+      position: relative
+      height: 350px
+      overflow: hidden
+
+
+      .images
+        position: relative
+        //width: 100%
+        //height: 350px
+        img
+          width: auto
+          max-width: inherit
+          height: 100%
+
+        &:before
+          background:  rgba(255, 228, 0, 0.71)
+          position: absolute
+          content: ''
+          top: 0
+          left: 0
+          height: 100%
+          width: 100%
+          transition: all .3s
+          opacity: 0
+        &:after
+          background:  url("../img/icons/product_hover.png") no-repeat center
+          position: absolute
+          content: ''
+          top: 50%
+          left: 50%
+          height: 45px
+          width: 45px
+          opacity: 0
+          transform: translateY(30px)
+          transition: all .3s ease-in
+          margin-top: -22px
+          margin-left: -22px
+
+
+
+      .category_name
+          text-align: left
+          font-size: 24px
+          line-height: 1em
+          font-family: "SegoeUILight", sans-serif
+          color: #000
+          background:  rgba(255, 228, 0, 0.71)
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 100%
+          box-sizing: border-box
+          padding: 20px 15px
+          white-space: nowrap
+          text-overflow: ellipsis
+          overflow: hidden
+          opacity: 1
+          transform: translateY(0px)
+          transition: all .3s ease-out
+
+
+      &:hover
+        text-decoration: none
+        .category_name
+          opacity: 0
+          transform: translateY(30px)
+          transition: all .3s ease-out
+        .images
+          &:before
+            opacity: 1
+            transition: all .3s
+            transition-delay: 0.1s
+          &:after
+            opacity: 1
+            transform: translateY(0px)
+            transition: all .3s ease-out
+            transition-delay: 0.1s
+
+
+
+
+
+
+.buy
+    width: 625px
+    margin: auto
+    li
+
+      width: 190px
+      margin-bottom: 70px
+      &:nth-child(2n)
+        float: right
+        clear: right
+      &:nth-child(2n+1)
+        float: left
+        clear: left
+
+
+
+
+      strong
+        color:  #191919
+        font-size: 20px
+        line-height: 1em
+        font-family: "SegoeUI-Semibold", sans-serif
+        margin-bottom: 15px
+        display: block
+
+
+      p
+        color:  #191919
+        font-size: 20px
+        line-height: 2em
+        font-family: "SegoeUILight", sans-serif
+
+
+        span
+          display: block
+          font-size: 14px
+          font-family: "SegoeUILight", sans-serif
+
+
+
+
+.article,.blog
+  margin: 105px auto 85px
+  h1
+    line-height: 1em
+    text-align: center
+    color:  #191919
+    font-size: 30px
+    margin-bottom: 90px
+    font-family: "SegoeUI", sans-serif
+    font-weight: normal
+
+  h3
+    line-height: 1em
+    color:  #191919
+    font-size: 24px
+    margin-bottom: 30px
+    font-family: "SegoeUI", sans-serif
+    font-weight: normal
+    margin-top: 50px
+
+
+
+  p
+    line-height: 1.5em
+    color:  #191919
+    font-size: 16px
+    margin-bottom: 30px
+    font-family: "SegoeUI", sans-serif
+    overflow: hidden
+    &:last-child
+      margin-bottom: 0
+  .image-left
+    //float: left
+    width: 400px
+    margin-right: 50px
+    display: inline-block
+    vertical-align: top
+    ~ .text_overflow
+      overflow: hidden
+      display: inline-block
+      vertical-align: middle
+      width: 485px
+
+
+  form
+    width: 538px
+    display: inline-block
+    text-align: center
+    span.error
+      display: none
+      font-size: 16px
+      margin: -15px auto 20px
+      white-space: nowrap
+      text-overflow: ellipsis
+      overflow: hidden
+      text-align: right
+      color: #ee2115
+
+
+    label
+      display: none!important
+    .error
+      input[type="text"],input[type="email"],textarea
+        border: 2px solid #ee2115
+        ~ span.error
+          display: block
+
+    input[type="text"],input[type="email"]
+      border: 1px #adacac  solid
+      width: 100%
+      height: 48px
+      -webkit-box-sizing: border-box
+      -moz-box-sizing: border-box
+      box-sizing: border-box
+      padding: 0 15px
+      line-height: 46px
+      color: #949292
+      font-size: 18px
+      font-family: "SegoeUILight", sans-serif
+      margin-bottom: 20px
+
+
+
+
+    textarea
+      width: 100%
+      height: 108px
+      box-sizing: border-box
+      padding: 0 15px
+      line-height: 48px
+      color: #949292
+      font-size: 18px
+      font-family: "SegoeUILight", sans-serif
+      border: 1px #adacac  solid
+      margin-bottom: 20px
+      &.error
+        border: 2px solid #ee2115
+        ~ span.error
+          display: block
+
+
+    button[type="submit"],  .btn.submit
+        cursor: pointer
+        margin: auto
+        padding: 9px 20px 14px
+        border: 1px solid #000000
+        background: none
+        display: inline-block
+        font-size: 18px
+        box-sizing: border-box
+        line-height: 1em
+        transition: all 0.35s
+        &:hover
+          background: #000000
+          color: #fff
+          transition: all 0.35s
+
+
+
+
+
+  ul.contact
+      float: right
+      li
+        display: block
+        color: #000
+        font-size: 20px
+        font-family: "SegoeUI", sans-serif
+        margin-bottom: 30px
+        a
+            text-decoration: none
+            color: #000000
+            display: inline-block
+            margin-left: 10px
+            &:hover
+              color: #e3cc0a
+              text-decoration: none
+
+
+
+
+
+form.payment
+  margin: 110px auto 80px
+  width: 700px
+  text-align: center
+
+  h3
+    margin-bottom: 35px
+    color: #191919
+    font-size: 24px
+    line-height: 1em
+    font-weight: normal
+    font-family: "SegoeUI", sans-serif
+    clear: both
+    text-align: left
+
+  textarea
+    width: 100%
+    height: 108px
+    box-sizing: border-box
+    padding: 0 15px
+    line-height: 48px
+    color: #949292
+    font-size: 18px
+    font-family: "SegoeUILight", sans-serif
+    border: 1px #adacac  solid
+    margin-bottom: 20px
+    &.error
+      border: 2px solid #ee2115
+      ~ span.error
+        display: block
+
+  button[type="submit"], .btn.submit
+    margin: auto
+    padding: 9px 20px 14px
+    border: 1px solid #000000
+    background: none
+    display: inline-block
+    font-size: 18px
+    cursor: pointer
+    box-sizing: border-box
+    line-height: 1em
+    transition: all 0.35s
+    &:hover
+      background: #000000
+      color: #fff
+      -webkit-transition: all 0.35s
+      -moz-transition: all 0.35s
+      -o-transition: all 0.35s
+      transition: all 0.35s
+  .row-form
+
+    > div
+
+      display: inline-block
+      vertical-align: top
+      float: left
+      margin-bottom: 20px
+      &:last-child
+        display: block
+        float: none
+        margin-right: 0!important
+      span.error
+        display: none
+
+      &.error
+        span.error
+          display: none
+          font-size: 16px
+          margin: 5px auto 0
+          white-space: nowrap
+          text-overflow: ellipsis
+          overflow: hidden
+          text-align: left
+          color: #ee2115
+
+        input[type="text"],input[type="email"]
+          border: 2px solid #ee2115
+
+          ~ span.error
+            display: block
+
+      label
+        display: none!important
+      &:nth-child(2n+1)
+        margin-right: 24px
+
+    &.delivery_novaposhta
+
+
+  input[type="text"],input[type="email"]
+      border: 1px #adacac  solid
+      width: 338px
+      height: 48px
+      box-sizing: border-box
+      padding: 0 15px
+      line-height: 48px
+      color: #949292
+      font-size: 18px
+      font-family: "SegoeUILight", sans-serif
+      &:focus
+        border: 2px solid #000
+
+
+
+  .radio
+    margin-bottom: 50px
+    text-align: left
+    > div
+      width: 50%
+      float: left
+      margin-bottom: 30px
+      label
+        text-align: left
+        cursor: pointer
+        padding-left: 40px
+        line-height: 25px
+        height: 25px
+        color:  #000000
+        font-size: 18px
+        display: inline-block
+
+
+      input[type="radio"]
+        display: none
+        &:checked
+          + label
+            background-position: top left
+
+    &.delivery
+      //#novaposhta2:checked
+
+
+.productfull
+  margin: 105px auto 160px
+  position: relative
+  .img-slider
+    position: absolute
+    top: 0
+    left: 0
+    width: 400px
+    height: 450px
+
+  .image
+    display: inline-block
+    //display: none
+    margin-right: 75px
+    vertical-align: top
+    width: 400px
+    position: relative
+    height: 450px
+
+    .big-images
+      margin-bottom: 40px
+      img
+        width: 400px
+        height: 350px
+
+    .thumbs
+      position: relative
+      padding: 0 20px
+      box-sizing: border-box
+      margin: auto
+      .owl-item
+        //width: 140px
+        //height: 75px
+        //margin-right: 18px
+      .owl-controls
+        .owl-nav
+          .owl-prev,
+          .owl-next
+            position: absolute
+            top: 50%
+            margin-top: -12px
+            background: url("../img/icons/array_slider.png") no-repeat
+            background-size: 100%
+            width: 15px
+            height: 25px
+            text-indent: -99999px
+            opacity: 1
+            &:hover
+              opacity: 0.8
+
+
+          .owl-prev
+            left: 0
+          .owl-next
+            right: 0
+            transform: rotate(180deg)
+
+
+
+
+
+
+
+  .info
+    width: 460px
+    display: inline-block
+    vertical-align: top
+    form
+        h1
+          color:  #010101
+          font-size: 24px
+          line-height: 1em
+          margin-bottom: 10px
+          font-weight: normal
+
+        .code
+          display: block
+          margin-bottom: 20px
+          font-size: 16px
+          line-height: 1em
+          color: #000
+
+
+        .description
+          display: block
+          margin-bottom: 30px
+          font-size: 16px
+          line-height: 1.5em
+          color: #000
+
+
+        .price
+          font-size: 24px
+          text-transform: uppercase
+          color: #000000
+          line-height: 1em
+          margin-bottom: 25px
+
+        .radio.size
+          margin-bottom: 25px
+          .attr_name
+            line-height: 1em
+            display: inline-block
+            vertical-align: middle
+            margin-right: 10px
+            color: #000000
+            font-size: 18px
+          .size-holder
+            display: inline-block
+            vertical-align: middle
+            >div
+              display: inline-block
+              vertical-align: middle
+              label
+                padding: 5px 10px
+                margin: 0 3px
+                border: 1px solid #000
+                font-size: 16px
+                line-height: 1em
+                text-align: center
+                display: block
+                &:before,&:after
+                  width: 0
+                  height: 0
+                  border: 0
+              input[type="radio"]
+                position: absolute
+                left: -100000px
+                display: none
+
+                &:checked ~ label
+                  border-color: #ffe400
+                  background: #ffe400
+
+
+
+
+
+        .radio.color
+          position: relative
+          //padding-bottom: 40px
+          margin-bottom: 25px
+          .attr_name
+            line-height: 1em
+            display: inline-block
+            vertical-align: middle
+            margin-right: 10px
+            color: #000000
+            font-size: 18px
+          .color-holder
+            display: block
+            margin-top: 20px
+            >div
+              display: inline-block
+              vertical-align: middle
+
+
+              label
+                cursor: pointer
+                display: block
+                margin: 0 6px
+                //padding: 2px
+                border: 1px solid #000
+                width: 20px
+                height: 20px
+                position: relative
+                z-index: 1
+                //box-sizing: border-box
+                padding: 0
+                &:before,&:after
+                  width: 0
+                  height: 0
+                  border: 0
+
+
+                img
+                  width: 20px
+                  pointer-events: none
+
+
+
+
+
+              input[type="radio"]
+                position: absolute
+                left: -100000px
+                display: none
+
+                &:checked ~ .color
+                  display: inline-block
+                &:checked ~ label
+                  border-color: #e3cc0a
+              .color
+                  position: absolute
+                  top: 0
+                  display: none
+                  left: 60px
+                  font-size: 18px
+                  line-height: 1em
+        button
+              padding: 9px 30px 14px
+              margin-bottom: 40px
+              border: 1px solid #000000
+              background: none
+              display: block
+              font-size: 18px
+              -webkit-box-sizing: border-box
+              -moz-box-sizing: border-box
+              box-sizing: border-box
+              line-height: 1em
+              -webkit-transition: all 0.35s
+              -moz-transition: all 0.35s
+              -o-transition: all 0.35s
+              transition: all 0.35s
+              &:hover
+                background: #000000
+                color: #fff
+                -webkit-transition: all 0.35s
+                -moz-transition: all 0.35s
+                -o-transition: all 0.35s
+                transition: all 0.35s
+
+
+
+
+.cart_page
+  margin-top: 75px
+  margin-bottom: 155px
+
+
+  h1
+    line-height: 1em
+    text-align: center
+    color:  #000
+    font-size: 30px
+    margin-bottom: 80px
+    font-family: "SegoeUI", sans-serif
+    font-weight: normal
+
+
+
+  form
+
+    .products
+      margin-bottom: 50px
+
+      .product-item
+        border: 1px solid #dbdbdb
+
+
+        margin-bottom: 20px
+        &:last-child
+          margin-bottom: 0
+        > div
+          display: inline-block
+          vertical-align: top
+          box-sizing: border-box
+          border-right: 1px solid  #dbdbdb
+          height: 150px
+          position: relative
+          &:last-child
+            border: 0
+          &.image
+              width: 190px
+              padding: 25px 15px
+              //height: 100px
+              overflow: hidden
+              text-align: center
+              img
+                  height: 100px
+
+
+
+          &.item-name
+              padding: 25px 15px 0 15px
+              width: 285px
+
+              a
+                display: block
+                margin-bottom: 15px
+                font-size: 20px
+                color: #010101
+                line-height: 1em
+                white-space: nowrap
+                text-overflow: ellipsis
+                overflow: hidden
+                &:hover
+                  text-decoration: none
+                  color: #e3cc0a
+
+
+          &.attr
+            padding: 25px 0 0 15px
+            width: 160px
+            .size
+              margin-bottom: 10px
+              .attr_name
+                color: #191919
+                display: inline-block
+                vertical-align: middle
+                font-size: 20px
+                line-height: 1em
+                margin-right: 8px
+              .size_name
+                font-size: 16px
+                line-height: 20px
+                display: inline-block
+                vertical-align: middle
+            .color
+              margin-bottom: 10px
+              .attr_name
+                color: #191919
+                display: inline-block
+                vertical-align: middle
+                font-size: 20px
+                line-height: 1em
+                margin-right: 8px
+              .color_name
+                font-size: 16px
+                line-height: 20px
+                display: block
+
+              .color_bg
+                width: 20px
+                height: 20px
+                display: inline-block
+                vertical-align: middle
+                border: 1px solid #000
+              img
+                display: inline-block
+                vertical-align: middle
+
+            .counts
+              font-size: 16px
+              line-height: 1em
+              color: #191919
+
+          &.price
+              width: 160px
+              text-align: center
+              padding-top: 60px
+              font-size: 24px
+              line-height: 1em
+              font-family: "SegoeUILight", sans-serif
+
+          &.delete
+            width: 127px
+            padding-top: 50px
+            text-align: center
+            button
+              border: 0
+              padding: 0
+              display: inline-block
+              background: none
+              &:hover
+                text-decoration: none
+                background: none
+
+                span
+                  color: #e3cc0a
+
+                img
+                  filter: none
+
+              span
+                display: block
+                color: #000000
+                font-size: 16px
+                line-height: 1em
+
+              img
+                margin-bottom: 10px
+                width: 19px
+                filter: brightness(0.1)
+
+
+
+
+    .control-pannel
+      width: 220px
+      float: right
+      a
+
+        padding: 8px 15px 14px
+        border: 1px solid #000000
+        background: none
+        display: inline-block
+        font-size: 20px
+        box-sizing: border-box
+        line-height: 1em
+        color: #000
+        text-align: center
+
+
+        transition: all 0.35s
+        &:hover
+          background: #000000
+          color: #fff
+          transition: all 0.35s
+          text-decoration: none
+
+    .total_price
+      letter-spacing: 0.12px
+      color: #000000
+      font-size: 24px
+      font-family: "SegoeUILight", sans-serif
+      line-height: 1em
+      margin-bottom: 40px
+
+
+
+
+
+.blog
+  margin-bottom: 55px
+  h3
+    line-height: 1em
+    color:  #191919
+    font-size: 20px
+    margin-bottom: 25px
+    font-family: "SegoeUI-Semibold", sans-serif
+    font-weight: normal
+    margin-top: 0
+
+  .item-arcticle
+    margin-bottom: 80px
+    clear: both
+    &:last-child
+      margin-bottom: 0
+
+    .image-left
+      position: relative
+      vertical-align: middle
+      &:after
+        position: absolute
+        content: ""
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: rgba(255, 228, 0, 0.71)
+        transition: all .3s
+        opacity: 0
+
+    .text_overflow
+      vertical-align: middle
+
+    .blog-date
+        display: block
+        margin-bottom: 20px
+        color: #000
+
+
+
+    a:hover
+      text-decoration: none
+      .image-left
+        &:after
+          transition: all .3s
+          opacity: 1
+
+      h3
+        color: #e3cc0a
+
+
+
+#blueimp-gallery
+  .prev,.next
+    width: 20px
+    height: 34px
+    background: url("../img/icons/array.png") no-repeat
+    background-size: 100%
+    &:hover
+      background-position: bottom left
+
+  .next
+    transform: rotate(180deg)
+
+  .close
+    width: 23px
+    height: 23px
+    background: url("../img/icons/close.png") no-repeat
+    background-size: 100%
+    margin: 0
+    &:hover
+        background-position: bottom left
+
+
+.mobile-navbar
+  background-color: #000
+  display: none
+  left: 0
+  top: 0
+  z-index: 2
+  transition: all .6s ease
+  width: 100%
+  position: absolute
+  &.active
+
+    //z-index: 101
+    background: #000
+    width: 100%
+
+  .navbar-toggle
+    background-color: transparent
+    display: inline-block
+    position: relative
+    padding: 9px 15px
+    z-index: 2
+    cursor: pointer
+    margin-top: 45px
+    .icon-bar
+        background-color: #ffe400
+        display: block
+        width: 30px
+        height: 3px
+
+        + .icon-bar
+          margin-top: 5px
+
+  .mobile-navbar-holder
+    .menu
+      li
+        display: block
+        margin: auto
+        padding: 10px 0
+        margin-bottom: 20px
+        &:first-child,
+        &:last-child
+          text-align: center
+
+
+
+
+
+
+body.client-ie,
+body.client-safari
+  .cart_page form .products .product-item > div.delete
+    button
+      position: relative
+      padding-top: 33px
+      display: inline-block
+      &:after
+        position: absolute
+        top: 0
+        left: 50%
+        background: url("../img/icons/delete2.png") no-repeat top center
+        background-size: 100%
+        width: 19px
+        content: ""
+        height: 23px
+        margin-left: -10px
+
+      img
+        display: none
+
+      &:hover:after
+        background: url("../img/icons/delete.png") no-repeat top center
+        background-size: 100%
+
+  .pagination
+    li
+      &.prev a
+        transform: rotate(0deg)
+      &.next a
+        transform: rotate(180deg)
+      a
+        background: url("../img/icons/pagination2.png") no-repeat
+        background-position: 0 -18px
+        background-size: 100%
+        &:hover
+          background-position: left bottom
+    &.disabled
+      a
+        background-position: 0 0
+        &:hover
+          background-position: 0 0
+
+
+body.client-moz
+  @media screen and (max-width: 959px)
+    img
+      width: 100%
+
+    .cart_page
+      form
+        .products
+          .product-item
+            > div.attr
+              .color img
+                width: 20px
+
+
+
+@media screen and (max-width: 992px)
+  .wrap
+      width: 880px
+  header
+    .social
+      margin-right: 80px
+    .lang
+      margin-right: 85px
+    .menu
+      li
+        margin-right: 67px
+  .slider
+    height: 585px
+    li
+      height: 585px
+
+
+  footer .wrap .adress
+    margin: auto 95px
+
+
+  .productfull
+    .image
+      margin-right: 50px
+    .info
+      width: 425px
+
+
+  .article, .blog
+    margin: 50px auto
+    h1
+      font-size: 28px
+      margin-bottom: 50px
+    form
+        width: 480px
+        display: block
+        margin: 0 auto 30px
+    ul.contact
+      display: block
+      float: none
+      text-align: center
+
+
+    .image-left
+      width: 350px
+      margin-right: 30px
+      ~ .text_overflow
+        width: 335px
+
+  .cart_page
+    margin: 50px auto
+
+    h1
+      font-size: 28px
+      margin-bottom: 50px
+    form
+      .products
+        .product-item
+          > div
+            &.image
+              padding: 0
+              width: 160px
+              img
+                //left: 0
+
+
+            &.item-name
+              padding: 25px 10px 0 10px
+              width: 270px
+
+            &.attr
+              padding: 25px 0 0 10px
+              width: 150px
+            &.price
+              width: 150px
+              font-size: 20px
+            &.delete
+              width: 130px
+
+
+  .page_wrapper.shop .container
+    top: -325px
+    margin-bottom: -325px
+
+
+  form.payment
+      margin: 50px auto
+
+  .categories
+    .category
+      width: 280px
+      height: 325px
+      a
+        height: 100%
+  .list_products
+    .product
+      width: 280px
+      margin-bottom: 50px
+
+      a
+        height: 100%
+        .images
+          height: 325px
+
+  .pagination
+    margin-bottom: 70px
+  .popular_product
+    .products
+      .product
+        width: 280px
+        height: 325px
+        a
+            height: 100%
+
+
+
+
+
+.success-payment
+  .container
+    margin: 100px auto 0
+    p
+      text-align: center
+      line-height: 1em
+      font-weight: normal
+      font-family: "SegoeUI", sans-serif
+      font-size: 20px
+
+.container
+  min-height: 33.5%
+  height: auto !important
+
+
+
+
+@media screen and (max-width: 959px)
+  .wrap
+    width: 720px
+  .slider
+    height: auto
+    margin-bottom: 50px
+    .owl-stage-outer
+      height: auto!important
+    li
+      height: auto
+
+  .popular_product
+    h3
+      margin-bottom: 40px
+      font-size: 24px
+
+  footer
+    .wrap
+      .adress
+        margin: auto 18px
+
+      > div
+        &:nth-child(3)
+          width: 220px
+        ul li
+          font-size: 14px
+
+
+  .productfull
+    margin: 50px auto
+    .image
+      margin: 0 auto 30px
+      display: block
+
+    .info
+      width: 100%
+
+
+
+
+
+
+
+
+
+
+  .cart_page
+
+
+
+      form
+        .products
+          .product-item
+            > div
+              &.image
+                padding: 0
+                width: 100px
+                vertical-align: middle
+                img
+                  height: 60px
+                  margin-top: 45px
+                  //top: 50%
+                  //margin-top: -30px
+                  //position: absolute
+
+              &.item-name
+
+                width: 200px
+                a
+                  font-size: 16px
+
+              &.attr
+
+                width: 140px
+                .color .attr_name
+                  font-size: 16px
+
+              &.price
+                width: 140px
+                font-size: 18px
+              &.delete
+                width: 120px
+
+
+  .mobile-navbar
+    display: block
+    .mobile-navbar-holder
+      display: none
+      .social,.lang,.menu
+        display: block
+
+  header
+    height: 125px
+    position: relative
+    width: 100%
+    z-index: 100
+    padding: 0
+
+
+    .social,.lang,.menu
+      display: none
+
+    .logo
+      margin-right: 0
+      position: absolute
+      top: 30px
+      left: 50%
+      margin-left: -100px
+      z-index: 10
+
+    .cart
+      position: absolute
+      top: 45px
+      right: 15px
+      z-index: 10
+
+
+    .social,.lang
+      margin: 0 auto 30px
+      text-align: center
+
+
+  .page_wrapper.home footer
+    padding-top: 65px
+
+  .page_wrapper.home header,.page_wrapper.shop header
+    height: 125px
+    position: relative
+    width: 100%
+    z-index: 100
+
+
+  .page_wrapper.home .container,
+  .page_wrapper.shop .container
+    top: 0
+    margin-bottom: 0
+    margin-top: 50px
+
+
+  .categories
+    margin: auto -10px 50px
+    .category
+      a
+        .category_name
+          font-size: 18px
+
+
+  .list_products
+    .product
+      a
+        .product_name
+          font-size: 18px
+        .price
+          font-size: 16px
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 780px)
+  .wrap
+    width: 100%
+    padding: 0 20px
+    box-sizing: border-box
+
+
+  footer
+    background: #000
+    .wrap
+      > div
+        display: block
+        vertical-align: top
+        margin: auto
+        text-align: center
+        margin-bottom: 40px
+        width: auto
+        .social
+          display: none
+        &.adress
+          ul
+            li
+              &:nth-child(n+2):nth-child(-n+10)
+                display: none
+
+      .adress
+        margin: auto
+    .copyright
+        text-align: center
+        margin-top: 20px
+
+
+
+
+
+  .slider
+    .owl-stage-outer
+      height: auto!important
+
+  .cart_page
+    form
+      .products
+        .product-item
+          > div
+            display: block
+            border: 0
+            margin: auto
+            margin-bottom: 20px
+            padding: 0
+            height: auto
+
+            &.image
+              width: 160px
+              img
+                height: 100px
+                margin-top: 0
+                //margin-top: -50px
+
+
+
+            &.item-name,&.attr,&.price,&.delete
+              width: 280px
+              padding: 0
+              text-align: center
+              button
+                font-size: 20px
+                margin: auto
+
+
+            &.attr
+              .color
+                .attr_name
+                  font-size: 20px
+
+            &.price
+              font-size: 20px
+            &.delete
+              button
+                background: #ffe400
+                padding: 10px 0
+                width: 280px
+                display: block
+                &:hover
+                  background: #e3cc0a
+                  span
+                    color: #000000
+                  img
+                    filter: brightness(0.1)
+
+
+
+
+
+  form.payment
+    width: auto
+    .radio > div
+      width: auto
+      margin-bottom: 20px
+      float: none
+      label
+        font-size: 15px
+    .row-form
+      margin-bottom: 0
+      > div
+        float: none
+        display: block
+        margin: auto
+        margin-bottom: 20px
+
+        &:nth-child(2n+1)
+          margin-right: auto
+
+
+    input[type="text"], input[type="email"]
+      width: 280px
+    h3
+      margin-bottom: 20px
+      font-size: 20px
+
+
+  .pagination li.prev
+    margin-right: 40px
+
+
+
+  form,.article form, .blog form
+    width: 100%
+    input[type="text"],  input[type="email"]
+      width: 100%
+
+
+  .article,.blog
+    ul.contact
+      li
+        font-size: 14px
+        margin-bottom: 15px
+
+    .image-left
+        margin-right: 0
+        margin-bottom: 30px
+        width: auto
+        ~ .text_overflow
+          width: 100%
+
+
+
+
+
+  .buy
+    width: 100%
+    li
+      width: 100%
+      float: none!important
+      margin-bottom: 20px
+
+      strong
+        font-size: 16px
+      p
+        font-size: 15px
+
+
+
+
+
+  body.client-ie,
+  body.client-safari
+    .cart_page form .products .product-item > div.delete
+      button
+
+        &:hover:after
+          background: url("../img/icons/delete2.png") no-repeat top center
+          background-size: 100%
+
+
+@media screen and (max-width: 480px)
+  .productfull .img-slider
+    width: 100%
+    height: auto
+
+  .productfull .image
+    height: 360px
+  .wrap
+    width: 100%
+    padding: 0 20px
+    box-sizing: border-box
+  .popular_product
+    h3
+      font-size: 18px
+      margin-bottom: 20px
+
+  .slider
+    margin-bottom: 30px
+
+
+  .page_wrapper.home .container, .page_wrapper.shop .container
+    margin-top: 30px
+
+  .productfull
+    margin: 30px auto
+    .image
+      width: 100%
+      .big-images img
+        width: auto
+        height: auto
+      .thumbs .owl-item
+        height: auto
+    .info
+      form
+        button
+          padding: 9px 15px 12px
+          font-size: 14px
+          margin-bottom: 0
+        .description
+          font-size: 14px
+        h1
+          font-size: 18px
+        .price
+          font-size: 18px
+
+        .code
+          font-size: 16px
+  header .logo
+    width: 180px
+    margin-left: -90px
+
+
+  .cart_page
+    margin: 30px auto
+    h1
+      font-size: 20px
+      margin-bottom: 30px
+    form
+      .total_price
+        font-size: 18px
+        margin-bottom: 20px
+
+      .control-pannel
+        width: 100%
+
+
+      .products
+        margin-bottom: 20px
+        .product-item
+          > div
+            &.item-name,&.attr,&.price,&.delete
+              width: auto
+            &.item-name,&.attr
+              button,.color .attr_name
+                font-size: 18px
+
+      button
+        font-size: 16px
+        padding: 8px 15px 12px
+
+
+
+
+  form.payment
+    margin: 30px auto
+    input[type="text"], input[type="email"]
+      width: 100%
+
+    .radio
+      margin-bottom: 20px
+
+
+
+
+  .article, .blog
+    margin: 30px auto
+    h1
+      font-size: 20px
+      margin-bottom: 30px
+
+    h3
+      margin-bottom: 30px
+      margin-top: 0
+      font-size: 18px
+
+
+
+
+  .blog
+    margin-bottom: 0
+    .item-arcticle
+      margin-bottom: 30px
+
+
+
+
+  form,.article form
+    input[type="text"],  input[type="email"]
+      width: 100%
+
+
+  .list_products,.categories
+    margin: auto
+    .product,.category
+        margin: 0 auto 30px
+
+
+  .list_products
+    .product
+      a
+        .product_name
+          margin-bottom: 7px
+
+
+  body
+      min-width: 320px
+
+  .error404
+    padding-top: 50px
+    h3
+      font-size: 50px
+      margin-bottom: 30px
+    p
+      margin-bottom: 30px
+      font-size: 18px
+
+    a
+      padding: 15px 15px 17px
+      font-size: 14px
+
+  .success-payment
+    .container
+      margin: 30px auto
+
+
+@media screen and (max-width: 320px)
+
+
+
+  .wrap
+    width: auto
+    padding: 0 20px
+    box-sizing: border-box
+
+  header .logo
+      width: 150px
+      margin-left: -75px
+
+  form,.article form
+    input[type="text"],  input[type="email"]
+      width: 280px
+
+  form.payment
+    input[type="text"], input[type="email"]
+      width: 280px
+
+
+
+  .productfull .info form .radio.size .attr_name
+    margin-bottom: 15px
+
+
+
+
+
+.error404
+  background: #ffe400
+  padding-top: 200px
+  text-align: center
+  h3
+    font-size: 120px
+    color: #000
+    font-family: Arial, sans-serif
+    line-height: 1em
+    text-align: center
+    margin-bottom: 40px
+    font-weight: 900
+  p
+    color: #000
+    text-align: center
+    margin-bottom: 70px
+    font-size: 48px
+    font-family: Arial, sans-serif
+    font-weight: 700
+    line-height: 1em
+
+  a
+    display: inline-block
+    padding: 15px 25px 21px
+    border: 2px solid #000
+    font-family: "SegoeUI-Semibold", sans-serif
+    color:  #010000
+    font-size: 20px
+    transition: all 0.35s
+    &:hover
+      transition: all 0.35s
+      background: #000000
+      color: #fff
+      text-decoration: none
+
+
+
+#cache
+  display: none
