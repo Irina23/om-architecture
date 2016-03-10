@@ -5,16 +5,71 @@ html(lang="ru")
 
     body
         .page_wrapper
-            include ./header.jade
+            //include ./header.jade
 
             div.container
                 .wrap
+                    ul.slider
+                        li
+                            a(href="#")
+                                img(src="img/content/1.jpg")
 
+                        li
+                            a(href="#")
+                                img(src="img/content/2.jpg")
+                        li
+                            a(href="#")
+                                img(src="img/content/1.jpg")
 
+                    #projects
+                        .project_nav
+                            ul
+                                li(data-filter="architecture") архитектура
+                                li(data-filter="design") дизайн
+                                li(data-filter="objects") предметы
 
-
-
-            include ./footer.jade
+                        .project-list
+                            .item-project(data-cat="architecture")
+                                a(href="#")
+                                    img(src="img/content/1.jpg")
+                                    .category Дизайн, Архитеркура
+                                    .title Проект жилого загородного дома Киев
+                            .item-project(data-cat="design")
+                                a(href="#")
+                                    img(src="img/content/2.jpg")
+                                    .category Дизайн, Архитеркура
+                                    .title Проект жилого загородного дома Киев
+                            .item-project(data-cat="objects")
+                                a(href="#")
+                                    img(src="img/content/ava.jpg")
+                                    .category Дизайн, Архитеркура
+                                    .title Проект жилого загородного дома Киев
+                            .item-project(data-cat="architecture")
+                                a(href="#")
+                                    img(src="img/content/2.jpg")
+                                    .category Дизайн, Архитеркура
+                                    .title Проект жилого загородного дома Киев
+                            .item-project(data-cat="design")
+                                a(href="#")
+                                    img(src="img/content/ava.jpg")
+                                    .category Дизайн, Архитеркура
+                                    .title Проект жилого загородного дома Киев
+                            .item-project(data-cat="objects")
+                                a(href="#")
+                                    img(src="img/content/1.jpg")
+                                    .category Дизайн, Архитеркура
+                                    .title Проект жилого загородного дома Киев
+                            .item-project(data-cat="architecture")
+                                a(href="#")
+                                    img(src="img/content/2.jpg")
+                                    .category Дизайн, Архитеркура
+                                    .title Проект жилого загородного дома Киев
+                            .item-project(data-cat="design")
+                                a(href="#")
+                                    img(src="img/content/1.jpg")
+                                    .category Дизайн, Архитеркура
+                                    .title Проект жилого загородного дома Киев
+            //include ./footer.jade
 
 
 
