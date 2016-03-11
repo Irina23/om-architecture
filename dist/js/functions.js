@@ -14,36 +14,33 @@ jQuery(document).ready(function() {
 
         //filter project
 
-        var posts = jQuery('.item-project');
-        jQuery( ".project_nav li" ).click(function() {
 
-            var customType = jQuery(this).data('filter'); // category
-            console.log(customType);
-            posts
-             .css("opacity", 0.5)
-             .filter(function () {
-             return jQuery(this).data('cat') === customType;
-             })
-             .css("opacity", 1);
-            //jQuery(window).trigger('resize');
+
 
     });
 
+    var posts = jQuery('.item-project');
+    jQuery(".project-nav li" ).click(  function() {
 
-
-
-
-
-    jQuery(window).resize(function() {
-
-
-
-
-
+        var nav_active = jQuery(this);
+        console.log(nav_active);
+        jQuery('.project-nav li').each(function(){
+            jQuery(this).removeClass("active");
         });
+        jQuery(nav_active).addClass("active");
+
+        var customType = jQuery(this).data('filter'); // category
+
+        posts
+            .css("opacity", 0.7)
+            .filter(function () {
+                return jQuery(this).data('cat') === customType;
+            })
+            .css("opacity", 1);
+
+
 
     });
-
 });
 
 
