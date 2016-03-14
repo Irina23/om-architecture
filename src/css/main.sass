@@ -29,19 +29,21 @@
 
 
 body
-  font-family: 'DINPro-Bold', Arial, sans-serif
+  font: 400 100%/1.375 'Roboto', sans-serif
+  //font-family: 'Roboto', sans-serif
   padding: 0
   margin: 0
   line-height: 1em
-  font-size: 14px
+  //font-size: 1.25em
   color: #000
-  font-weight: 700
+  //font-weight: 700
   a
-    font-family: 'DINPro-Bold', Arial, sans-serif
+    font: 400 100%/1.375 'Roboto', sans-serif
+    //font-family: 'Roboto', sans-serif
     line-height: 1em
-    font-size: 14px
+    //font-size: 14px
     color: #000
-    font-weight: 700
+    //font-weight: 700
 
 
 .img-holder
@@ -60,8 +62,22 @@ img
   display: none
 
 
+
+
 .content
   padding: 0 45px
+
+
+.container
+  min-height: 100%
+  height: auto
+  position: absolute
+  top: 100%
+  left: 0
+  width: 100%
+  z-index: 10
+  perspective: 1000
+  background: #fff
 
 
 
@@ -71,13 +87,13 @@ img
   top: 0
   left: 0
   width: 100%
-  z-index: 10
+  z-index: 11
 
   .content
     position: relative
   .lang
     position: absolute
-    top: 17px
+    top: 15px
     right: 105px
     >div
       display: inline-block
@@ -86,10 +102,10 @@ img
       &.active
         text-decoration: underline
       a
-        font-size: 16px
+        //font-size: 16px
         line-height: 1em
-        font-family: Arial, sans-serif
-        font-weight: 400
+        //font-family: Arial, sans-serif
+        //font-weight: 400
   .logo
       position: absolute
       left: 50%
@@ -108,8 +124,9 @@ img
       margin-right: 60px
       a
         text-transform: uppercase
-        font-size: 16px
+        //font-size: 16px
         line-height: 1em
+        font-weight: 600
 
       &:nth-child(5),
       &:nth-child(4)
@@ -121,16 +138,35 @@ img
         a
           text-decoration: underline
 
-#slider
-  padding-bottom: 50px
-  padding-top: 50px
 
+
+
+#slider
+  padding: 50px 45px
+  //padding-bottom: 50px
+  //padding-top: 50px
+  left: 0
+  height: 100%
+  top: 0
+  position: fixed
+  width: 100%
+  overflow: hidden
+  z-index: 0
+  box-sizing: border-box
+
+  .bx-wrapper
+    pointer-events: none
   .slider
-    height: 760px
+    height: 100%
     overflow: hidden
+    width: 100%
+
+    li
+      height: 100%
+      width: 100%
     a
       display: block
-      height: 760px
+      height: 100%
       width: 100%
 
 
@@ -152,7 +188,8 @@ img
       cursor: pointer
       margin-right: 50px
       text-transform: uppercase
-      font-size: 14px
+      //font-size: 14px
+      font-weight: 700
       line-height: 1em
       text-decoration: underline
       color: #afafb0
@@ -168,19 +205,21 @@ img
     box-sizing: border-box
     padding: 0 10px
     float: left
+
+
     .text-holder
 
       color: #000
       line-height: 1.5em
       .category
-        font-size: 16px
+        //font-size: 16px
         margin-bottom: 5px
-        font-family: 'din-alternate-bold', Arial, sans-serif
+        //font-family: 'din-alternate-bold', Arial, sans-serif
         font-weight: 700
         padding-top: 15px
 
       .title
-        font-size: 20px
+        //font-size: 20px
         padding-bottom: 20px
 
 
@@ -192,11 +231,12 @@ img
 
 
 
+
 #about
   .content
     padding: 50px 90px
     p
-      font-size: 16px
+      //font-size: 16px
       color: #6c6c6c
       line-height: 1.3em
       text-align: justify
@@ -207,7 +247,7 @@ img
       margin-bottom: 30px
       text-align: center
       width: 100%
-      height: 530px
+      //height: 530px
       img
         height: 100%
 
@@ -222,15 +262,15 @@ img
   .content
     padding: 50px 45px 30px
     p
-      font-size: 15px
+      //font-size: 15px
       line-height: 1.3em
-      font-family: Arial, sans-serif
+      //font-family: Arial, sans-serif
       font-weight: 600
     a
       display: block
-      font-size: 15px
+      //font-size: 15px
       line-height: 1.3em
-      font-family: Arial, sans-serif
+      //font-family: Arial, sans-serif
       font-weight: 600
 
   #map
@@ -263,6 +303,11 @@ img
           width: 26px
           height: 23px
           background-position: -40px 0
+      &.google
+          a
+            background: none
+            .fa-2x
+              font-size: 1.5em
       &.instagram
         a
           width: 21px
@@ -289,8 +334,11 @@ img
     .img-holder
       float: left
       width: 440px
+
       a
-        display: block
+        display: none
+        &:first-child
+          display: block
 
 
     .text-holder
@@ -298,12 +346,13 @@ img
       vertical-align: top
       width: 565px
       h3
-        font-size: 20px
+        //font-size: 20px
+        font-size: 1.5em
         line-height: 1.3em
         margin-bottom: 40px
         text-align: justify
       p
-        font-size: 16px
+        //font-size: 16px
         line-height: 1.3em
         color: #6c6c6c
         text-align: justify
@@ -314,14 +363,17 @@ img
       width: 120px
       text-align: right
       .data
-        font-size: 20px
+        //font-size: 20px
         color: #010101
         line-height: 1em
         margin-bottom: 30px
+        font-size: 1.5em
+        font-weight: 700
 
     .social
       .title-social
-        font-size: 20px
+        //font-size: 20px
+        font-size: 1.5em
         color: #010101
         line-height: 1em
         margin-bottom: 30px
@@ -355,10 +407,11 @@ img
           top: 0
           right: 0
           display: block!important
-          font-size: 20px
+          //font-size: 20px
+          font-size: 1.5em
           line-height: 1.3em
           font-weight: 400
-          font-family: 'DINPro-Regular', Arial, sans-serif
+          //font-family: 'DINPro-Regular', Arial, sans-serif
           margin-left: 0!important
           transition: all 0.35s
           opacity: 1
@@ -374,8 +427,8 @@ footer
     .copyright
       line-height: 50px
       float: left
-      font-size: 16px
-      font-family:  Arial, sans-serif
+      //font-size: 16px
+      //font-family:  Arial, sans-serif
       font-weight: 700
     .logo
       position: absolute
@@ -411,6 +464,11 @@ footer
             width: 26px
             height: 23px
             background-position: -40px 0
+        &.google
+          a
+            background: none
+            .fa-2x
+              font-size: 1.5em
         &.instagram
           a
             width: 21px
@@ -419,3 +477,26 @@ footer
 
         &:last-child
           margin-right: 0
+
+
+
+#blueimp-gallery
+  .indicator
+    text-align: center
+    width: 100%
+    height: 10px
+    position: absolute
+    bottom: 20px
+    left: 0
+    right: 0
+    li
+
+      border-radius: 10px
+      display: inline-block
+      vertical-align: middle
+      width: 10px
+      height: 10px
+      margin: 0 5px
+      background: #fff!important
+      &.active
+        background: #000!important

@@ -19,19 +19,15 @@
   font-style: normal; }
 
 body {
-  font-family: 'DINPro-Bold', Arial, sans-serif;
+  font: 400 100%/1.375 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
   line-height: 1em;
-  font-size: 14px;
-  color: #000;
-  font-weight: 700; }
+  color: #000; }
   body a {
-    font-family: 'DINPro-Bold', Arial, sans-serif;
+    font: 400 100%/1.375 'Roboto', sans-serif;
     line-height: 1em;
-    font-size: 14px;
-    color: #000;
-    font-weight: 700; }
+    color: #000; }
 
 .img-holder {
   overflow: hidden;
@@ -52,18 +48,30 @@ img {
 .content {
   padding: 0 45px; }
 
+.container {
+  min-height: 100%;
+  height: auto;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  -webkit-perspective: 1000;
+          perspective: 1000;
+  background: #fff; }
+
 #header {
   background: #fff;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10; }
+  z-index: 11; }
   #header .content {
     position: relative; }
   #header .lang {
     position: absolute;
-    top: 17px;
+    top: 15px;
     right: 105px; }
     #header .lang > div {
       display: inline-block;
@@ -72,10 +80,7 @@ img {
       #header .lang > div.active {
         text-decoration: underline; }
       #header .lang > div a {
-        font-size: 16px;
-        line-height: 1em;
-        font-family: Arial, sans-serif;
-        font-weight: 400; }
+        line-height: 1em; }
   #header .logo {
     position: absolute;
     left: 50%;
@@ -93,8 +98,8 @@ img {
       margin-right: 60px; }
       #header #menu li a {
         text-transform: uppercase;
-        font-size: 16px;
-        line-height: 1em; }
+        line-height: 1em;
+        font-weight: 600; }
       #header #menu li:nth-child(5), #header #menu li:nth-child(4) {
         float: right; }
       #header #menu li:first-child {
@@ -103,14 +108,27 @@ img {
         text-decoration: underline; }
 
 #slider {
-  padding-bottom: 50px;
-  padding-top: 50px; }
+  padding: 50px 45px;
+  left: 0;
+  height: 100%;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  z-index: 0;
+  box-sizing: border-box; }
+  #slider .bx-wrapper {
+    pointer-events: none; }
   #slider .slider {
-    height: 760px;
-    overflow: hidden; }
+    height: 100%;
+    overflow: hidden;
+    width: 100%; }
+    #slider .slider li {
+      height: 100%;
+      width: 100%; }
     #slider .slider a {
       display: block;
-      height: 760px;
+      height: 100%;
       width: 100%; }
 
 #projects {
@@ -127,7 +145,7 @@ img {
       cursor: pointer;
       margin-right: 50px;
       text-transform: uppercase;
-      font-size: 14px;
+      font-weight: 700;
       line-height: 1em;
       text-decoration: underline;
       color: #afafb0; }
@@ -144,13 +162,10 @@ img {
       color: #000;
       line-height: 1.5em; }
       #projects .item-project .text-holder .category {
-        font-size: 16px;
         margin-bottom: 5px;
-        font-family: 'din-alternate-bold', Arial, sans-serif;
         font-weight: 700;
         padding-top: 15px; }
       #projects .item-project .text-holder .title {
-        font-size: 20px;
         padding-bottom: 20px; }
     #projects .item-project a {
       display: block; }
@@ -160,7 +175,6 @@ img {
 #about .content {
   padding: 50px 90px; }
   #about .content p {
-    font-size: 16px;
     color: #6c6c6c;
     line-height: 1.3em;
     text-align: justify;
@@ -169,8 +183,7 @@ img {
   #about .content .img-holder {
     margin-bottom: 30px;
     text-align: center;
-    width: 100%;
-    height: 530px; }
+    width: 100%; }
     #about .content .img-holder img {
       height: 100%; }
 
@@ -179,15 +192,11 @@ img {
   #contacts .content {
     padding: 50px 45px 30px; }
     #contacts .content p {
-      font-size: 15px;
       line-height: 1.3em;
-      font-family: Arial, sans-serif;
       font-weight: 600; }
     #contacts .content a {
       display: block;
-      font-size: 15px;
       line-height: 1.3em;
-      font-family: Arial, sans-serif;
       font-weight: 600; }
   #contacts #map {
     height: 690px;
@@ -213,6 +222,10 @@ img {
         width: 26px;
         height: 23px;
         background-position: -40px 0; }
+      #contacts .social li.google a {
+        background: none; }
+        #contacts .social li.google a .fa-2x {
+          font-size: 1.5em; }
       #contacts .social li.instagram a {
         width: 21px;
         height: 23px;
@@ -232,18 +245,19 @@ img {
     float: left;
     width: 440px; }
     #blog .item-article .img-holder a {
-      display: block; }
+      display: none; }
+      #blog .item-article .img-holder a:first-child {
+        display: block; }
   #blog .item-article .text-holder {
     display: inline-block;
     vertical-align: top;
     width: 565px; }
     #blog .item-article .text-holder h3 {
-      font-size: 20px;
+      font-size: 1.5em;
       line-height: 1.3em;
       margin-bottom: 40px;
       text-align: justify; }
     #blog .item-article .text-holder p {
-      font-size: 16px;
       line-height: 1.3em;
       color: #6c6c6c;
       text-align: justify; }
@@ -252,12 +266,13 @@ img {
     width: 120px;
     text-align: right; }
     #blog .item-article .info-holder .data {
-      font-size: 20px;
       color: #010101;
       line-height: 1em;
-      margin-bottom: 30px; }
+      margin-bottom: 30px;
+      font-size: 1.5em;
+      font-weight: 700; }
   #blog .item-article .social .title-social {
-    font-size: 20px;
+    font-size: 1.5em;
     color: #010101;
     line-height: 1em;
     margin-bottom: 30px; }
@@ -294,10 +309,9 @@ img {
       top: 0;
       right: 0;
       display: block !important;
-      font-size: 20px;
+      font-size: 1.5em;
       line-height: 1.3em;
       font-weight: 400;
-      font-family: 'DINPro-Regular', Arial, sans-serif;
       margin-left: 0 !important;
       -webkit-transition: all 0.35s;
       transition: all 0.35s;
@@ -312,8 +326,6 @@ footer .content {
   footer .content .copyright {
     line-height: 50px;
     float: left;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
     font-weight: 700; }
   footer .content .logo {
     position: absolute;
@@ -341,9 +353,32 @@ footer .content {
         width: 26px;
         height: 23px;
         background-position: -40px 0; }
+      footer .content .social li.google a {
+        background: none; }
+        footer .content .social li.google a .fa-2x {
+          font-size: 1.5em; }
       footer .content .social li.instagram a {
         width: 21px;
         height: 23px;
         background-position: top right; }
       footer .content .social li:last-child {
         margin-right: 0; }
+
+#blueimp-gallery .indicator {
+  text-align: center;
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0; }
+  #blueimp-gallery .indicator li {
+    border-radius: 10px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: #fff !important; }
+    #blueimp-gallery .indicator li.active {
+      background: #000 !important; }
