@@ -41,6 +41,32 @@ jQuery(document).ready(function() {
 
 
     });
+
+
+
+
+    /*jQuery(window).scroll(function () {
+
+        if ((jQuery(this).scrollTop() > 10) && (jQuery(window).width() > 1199)) {
+            jQuery("#header").addClass('fixed');
+
+
+        } else {
+            jQuery("#header").removeClass('fixed');
+
+        }
+    });*/
+
+
+    jQuery("#menu").on("click","a[href^='#']", function (event) {
+        event.preventDefault();
+        //var id  = jQuery(this).attr('href'), top = jQuery(id).offset().top;
+        jQuery('html, body').animate({ scrollTop:  jQuery('div[id="'+this.hash.slice(1)+'"]').offset().top }, 1000 );
+
+        //jQuery('body,html').animate({scrollTop: top}, 1500);
+    });
+
+
 });
 
 

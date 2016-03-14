@@ -10,6 +10,7 @@
     <script src="js/functions.js"></script>
     <script src="js/jquery.bxslider.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
+    <!--script(src="js/jquery.scrollTo.js")-->
     <script src="js/scrollspy.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3"></script>
     <script type="text/javascript" src="js/map.js"></script>
@@ -19,9 +20,26 @@
     <script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#menu" data-offset="105">
     <div class="page_wrapper">
-      <!--include ./header.jade-->
+      <header id="header">
+        <div class="content">
+          <div class="logo"><a href="#slider"><img src="img/content/logo.png"></a></div>
+          <div id="menu">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#slider">Главная</a></li>
+              <li><a href="#projects">Проекты</a></li>
+              <li><a href="#about">О нас</a></li>
+              <li><a href="#blog">Пресса</a></li>
+              <li><a href="#contacts">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="lang">
+            <div class="ru active"><a href="#">ru</a></div>
+            <div class="en"><a href="#">en</a></div>
+          </div>
+        </div>
+      </header>
       <div class="container">
         <div class="wrap">
           <div id="slider">
@@ -171,7 +189,7 @@
                   <div class="data">10.03.2016</div>
                   <div class="social">
                     <div class="title-social">Поделится</div>
-                    <div data-services="facebook,twitter,gplus" data-url="http://google.com.ua/#article1" class="ya-share2"></div>
+                    <div data-services="facebook,twitter,gplus" data-url="http://google.com.ua/#article1" data-counter="" class="ya-share2"></div>
                   </div>
                 </div>
               </div>
@@ -202,7 +220,7 @@
                   <div class="data">10.03.2016</div>
                   <div class="social">
                     <div class="title-social">Поделится</div>
-                    <div data-services="facebook,twitter,gplus" data-url="http://google.com.ua/#article2" class="ya-share2"></div>
+                    <div data-services="facebook,twitter,gplus" data-url="http://google.com.ua/#article2" data-counter="" class="ya-share2"></div>
                   </div>
                 </div>
               </div>
@@ -227,7 +245,7 @@
                   <div class="data">10.03.2016</div>
                   <div class="social">
                     <div class="title-social">Поделится</div>
-                    <div data-services="facebook,twitter,gplus" data-url="http://google.com.ua/#article3" class="ya-share2"></div>
+                    <div data-services="facebook,twitter,gplus" data-url="http://google.com.ua/#article3" data-counter="" class="ya-share2"></div>
                   </div>
                 </div>
               </div>
@@ -254,7 +272,7 @@
                   <div class="data">10.03.2016</div>
                   <div class="social">
                     <div class="title-social">Поделится</div>
-                    <div data-services="facebook,twitter,gplus" data-url="http://google.com.ua/#article1" class="ya-share2"></div>
+                    <div data-services="facebook,twitter,gplus" data-url="http://google.com.ua/#article1" data-counter="" class="ya-share2"></div>
                   </div>
                 </div>
               </div>
@@ -275,7 +293,7 @@
                   <div class="data">10.03.2016</div>
                   <div class="social">
                     <div class="title-social">Поделится</div>
-                    <div data-services="facebook,twitter,gplus" data-url="http://google.com.ua/#article2" class="ya-share2"></div>
+                    <div data-services="facebook,twitter,gplus" data-url="http://google.com.ua/#article2" data-counter="" class="ya-share2"></div>
                   </div>
                 </div>
               </div>
@@ -306,7 +324,7 @@
                   <div class="data">10.03.2016</div>
                   <div class="social">
                     <div class="title-social">Поделится</div>
-                    <div data-services="facebook,twitter,gplus" data-url="http://google.com.ua/#article3" class="ya-share2"></div>
+                    <div data-services="facebook,twitter,gplus" data-url="http://google.com.ua/#article3" data-counter="" class="ya-share2"></div>
                   </div>
                 </div>
               </div>
@@ -314,9 +332,18 @@
           </div>
         </div>
       </div>
-      <!--include ./footer.jade-->
-      
-      
+      <footer>
+        <div class="content cf">
+          <div class="copyright">OM architects 2016</div>
+          <div class="logo"><a href="#slider"><img src="img/content/logo.png"></a></div>
+          <div class="social">
+            <li class="facebook"><a href="#" target="_blank"></a></li>
+            <li class="twitter"><a href="#" target="_blank"></a></li>
+            <li class="instagram"><a href="#" target="_blank"></a></li>
+          </div>
+        </div>
+      </footer>
+      <div id="cache"></div>
     </div>
   </body>
 </html>
