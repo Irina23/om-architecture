@@ -3,6 +3,7 @@ jQuery(document).ready(function() {
 
 
     jQuery(window).load(function() {
+        $('#preloader').fadeOut('slow',function(){$(this).remove();});
         gutter_in_pixels = jQuery(".item-project").width() * 0.02;
         jQuery('.project-list').masonry({
             // options
@@ -13,8 +14,6 @@ jQuery(document).ready(function() {
         jQuery('.slider').bxSlider({
             auto: true
         });
-
-
 
 
 
@@ -91,6 +90,27 @@ jQuery(document).ready(function() {
 
 
 
+
+    // navigation
+    $('#projects, .slider').find('a').on('click', function (e) {
+        e.preventDefault();
+        var $self = $(this);
+        var href = $self.attr('href');
+
+        if (href == "#") {
+
+        } else {
+
+            $('body').animate({
+                'opacity': 0
+            }, 600, function () {
+                document.location.href = href;
+            });
+        }
+    });
+
+
+
 });
 
 
@@ -106,14 +126,7 @@ window.onload = function(){
         };
     });
 
-    /*document.getElementById('blog-img').onclick = function (event) {
-        event = event || window.event;
-        var target = event.target || event.srcElement,
-            link = target.src ? target.parentNode : target,
-            options = {index: link, event: event},
-            links = this.getElementsByTagName('a');
-        blueimp.Gallery(links, options);
-    };*/
+
 };
 
 

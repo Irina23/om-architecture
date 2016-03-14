@@ -132,6 +132,9 @@
   font-size: 30px;
   text-decoration: none;
   cursor: pointer;
+  width: 31px;
+  height: 30px;
+  background: url(../img/icons/close_w.png) center no-repeat;
 }
 .blueimp-gallery > .play-pause {
   position: absolute;

@@ -48,7 +48,17 @@ img {
 .content {
   padding: 0 45px; }
 
-.container {
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  background: #fff url("../img/content/logo.png") no-repeat center center; }
+
+.home .container {
   min-height: 100%;
   height: auto;
   position: absolute;
@@ -117,8 +127,6 @@ img {
   overflow: hidden;
   z-index: 0;
   box-sizing: border-box; }
-  #slider .bx-wrapper {
-    pointer-events: none; }
   #slider .slider {
     height: 100%;
     overflow: hidden;

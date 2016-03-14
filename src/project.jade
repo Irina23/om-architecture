@@ -3,368 +3,90 @@ html(lang="ru")
     include ./head.jade
 
 
-    body(data-spy="scroll", data-target="#menu", data-offset="105")
+    body.project(data-spy="scroll", data-target="#menu", data-offset="105")
         .page_wrapper
 
+            #preloader
             #top
-            include ./header.jade
+            header#header
+                .content
+                    .logo
+                        a(href="#top")
+                            img(src="img/content/logo.png")
 
-
-            #slider
-
-                        ul.slider
+                    #menu
+                        ul.nav.nav-tabs
+                            li.active
+                                a(href="#top") Главная
                             li
-                                a(href="#project_1", style="background: url('img/content/slider.jpg') no-repeat center; background-size: cover;")
-
+                                a(href="#projects") Проекты
+                            li
+                                a(href="#about") О нас
 
                             li
-                                a(href="#project_1", style="background: url('img/content/slider.jpg') no-repeat center; background-size: cover;")
-
+                                a(href="#blog") Пресса
                             li
-                                a(href="#project_1", style="background: url('img/content/slider.jpg') no-repeat center; background-size: cover;")
+                                a(href="#contacts") Контакты
+                    .lang
+                        .ru.active
+                            a(href="#") ru
+                        .en
+                            a(href="#") en
+
+
+
+
 
 
 
 
             .container
-
-
-                    #projects.cf
-                        .content
-                            .project-nav
-                                ul
-                                    li.active(data-cat="all") Все
-                                    li(data-cat="architecture") Архитектура
-                                    li(data-cat="design") Дизайн
-                                    li(data-cat="objects") Предметы
-
-                            .project-list
-                                .item-project(data-cat="architecture design")
-                                    a(href="#project_1")
-                                        .img-holder
-                                            img(src="img/content/project12.jpg")
-                                        .text-holder
-                                            .category Дизайн, Архитектура
-                                            .title Проект загородного жилого дома пригород Киева
-                                .item-project(data-cat="architecture design")
-                                    a(href="#project_2")
-                                        .img-holder
-                                            img(src="img/content/project9.jpg")
-                                        .text-holder
-                                            .category Дизайн, Архитектура
-                                            .title Проект загородного жилого дома пригород Киева
-                                .item-project(data-cat="design")
-                                    a(href="#project_1")
-                                        .img-holder
-                                            img(src="img/content/project10.jpg")
-                                        .text-holder
-                                            .category Дизайн
-                                            .title Проект загородного жилого дома пригород Киева
-
-                                .item-project(data-cat="architecture")
-                                    a(href="#project_1")
-                                        .img-holder
-                                            img(src="img/content/project8.jpg")
-                                        .text-holder
-                                            .category Архитектура
-                                            .title Гостевой домик
-                                .item-project(data-cat="design objects")
-                                    a(href="#project_1")
-                                        .img-holder
-                                            img(src="img/content/project7.jpg")
-                                        .text-holder
-                                            .category Дизайн, Предмет
-                                            .title Проэкт стены около камина
-                                .item-project(data-cat="design")
-                                    a(href="#project_1")
-                                        .img-holder
-                                            img(src="img/content/project1.jpg")
-                                        .text-holder
-                                            .category Дизайн
-                                            .title Проект загородного жилого дома пригород Киева
-                                .item-project(data-cat="design")
-                                    a(href="#project_1")
-                                        .img-holder
-                                            img(src="img/content/project6.jpg")
-                                        .text-holder
-                                            .category Дизайн
-                                            .title Проект бильярд бара
-                                .item-project(data-cat="design architecture")
-                                    a(href="#project_1")
-                                        .img-holder
-                                            img(src="img/content/project5.jpg")
-                                        .text-holder
-                                            .category Дизайн, Архитектура
-                                            .title Проект загородного жилого дома пригород Киева
-
-                                .item-project(data-cat="design")
-                                    a(href="#project_1")
-                                        .img-holder
-                                            img(src="img/content/project4.jpg")
-                                        .text-holder
-                                            .category Дизайн
-                                            .title Проект загородного жилого дома пригород Киева
-
-                                .item-project(data-cat="design")
-                                    a(href="#project_1")
-                                        .img-holder
-                                            img(src="img/content/project3.jpg")
-                                        .text-holder
-                                            .category Дизайн
-                                            .title Проект бильярд бара
-
-
-                                .item-project(data-cat="design architecture")
-                                    a(href="#project_1")
-                                        .img-holder
-                                            img(src="img/content/project2.jpg")
-                                        .text-holder
-                                            .category Дизайн, Архитектура
-                                            .title Проект загородного жилого дома пригород Киева
-
-
-                                .item-project(data-cat="design")
-                                    a(href="#project_1")
-                                        .img-holder
-                                            img(src="img/content/project11.jpg")
-                                        .text-holder
-                                            .category Дизайн
-                                            .title Проект загородного жилого дома пригород Киева
-
-                    #about
-                        .content
-                            .img-holder
-                                img(src="img/content/about.jpg")
+                .content
+                    .img-holder
+                        img(src="img/content/project_img0.jpg")
+                    .text-holder
+                        .text-left
+                            span.title Год: 2015
+                            span.title Киевская область
+                            span.title Команда
+                            span Игорь Фоменко
+                            span Андрей Медведь
+                        .text-right
+                            h1 Copper house
                             p.
-                                Архитектурное-бюро под руководством Андрея Медведя и Игоря Фоменко “OM- architecture” занимается проектированием жилых и общественных зданий,
-                                работает в сфере дизайна жилого и общественного интерьера, также активно занимаются разработкой и созданием предметов интерьера.
-                                Мы ведем наши объекты от идеи, концепции, архитектурного проектирования до отделки и комплектации «под ключ».
-                                В творческом коллективе бюро работают профессиональные архитекторы, которые помимо разработки проекта, занимаются и подбором деталей интерьера,
-                                и автор- ским надзором за реализацией проектов. Менеджеры ведут процессы строительства, отделки, взаимодействуют со смежными компаниями, комплектуют объект.
-                                Практически в каждом проекте используем предметы, устройства, технологии и материалы собственной разработки.
-                                Мы поддерживаем общение с широким кругом профессионалов, подкованных не только в художественном плане, но и технически,
-                                имеющих опыт практического воплощения различных идей любой сложности. Это подрядчики и поставщики по всем направлениям строительства, инженерии, комплектации.
-                                основной принцип работы нашего архитектурного бюро заключается в создании архитектуры и интерьеров «ВНЕ ВРЕМЕНИ», то есть современных и уместных в любом времени,
-                                через 10, 20, 30 лет ... неустаревающих, а значит - вечно ценных. Индивидуальный подход к каждому заказчику позволяет нам достигать качественного результата с учетом всех его пожеланий.
-                                Наши проекты неоднократно участвовали и побеждали во многих конкурсах, публиковались в различных изданиях.
-                    #contacts.cf
-                        .content
-                            #map
-                            .info-contacts.cf
-                                .info-left
-                                    p Киев, ул. Кожемяцкая 12ж
-                                    a(href="mailto:om.architecture.com@gmail.com") om.architecture.com@gmail.com
+                                Современная резиденция площадью 450 м2 построена в киевской области на берегу реки. Перед архитекторами из OM-architecture стояла задача создать современный уютный загородный дом с элементами "Альпийского шале". Для внутреннего оформления выбрали натуральные материалы: медь, камень, дерево. Сочетание современных форм и классических элементов декора сформировали уникальный характер шале.
+                                Планировка здания простая и функциональная. Каминный зал, кухню, столовую, холл, гардеробную - объединяет куб покрытый натуральной медью. Это центральный элемент 1-го этажа. Внутри него поместились: шкаф, встроенная кухня, несущие конструкции здания, и декоративная ниша с растениями. Весь второй этаж заняли спальни с ванными комнатами. Из каждой спальни есть выход на персональную террасу. В цокольном этаже спряталась комната отдых с бильярдным столом, а также все технические помещения. Основным акцентом бильярдной получился узор на бетонном потолке, на который пошло 150 м кабеля. Особое внимание на объекте уделялось техническим деталям и мелочам интерьера (вентиляционные решетки, душевые трапы, освещение, двери и тд..)
 
-                                    .social
-                                        li.facebook
-                                            a(href="#", target="_blank")
-                                        //li.twitter
-                                            a(href="#", target="_blank")
-                                        li.google
-                                            a(href="#", target="_blank")
-                                                i(class="fa fa-google-plus fa-2x")
-                                        li.instagram
-                                            a(href="#", target="_blank")
-
-                                .info-right
-                                    a(href="tel:+380443388388") +380443388388
-                                    a(href="tel:+380935904455") +380935904455
-                                    a(href="tel:+380681292797") +380681292797
+                    .img-holder
+                        img(src="img/content/project_img1.jpg")
+                    .img-holder
+                        img(src="img/content/project_img2.jpg")
+                    .img-holder
+                        img(src="img/content/project_img3.jpg")
+                    .img-holder
+                        img(src="img/content/project_img4.jpg")
+                    .img-holder
+                        img(src="img/content/project_img5.jpg")
+                    .img-holder
+                        img(src="img/content/project_img6.jpg")
+                    .img-holder
+                        img(src="img/content/project_img7.jpg")
+                    .img-holder
+                        img(src="img/content/project_img8.jpg")
+                    .img-holder
+                        img(src="img/content/project_img9.jpg")
+                    .img-holder
+                        img(src="img/content/project_img10.jpg")
+            include ./footer.jade
 
 
 
-
-                    #blog
-                      .content
-                        #article1.item-article.cf
-                            .img-holder.blog-img
-                                a(href="img/content/blog1.jpg")
-                                    img(src="img/content/blog1.jpg")
-                                a(href="img/content/blog2.jpg")
-                                    img(src="img/content/blog2.jpg")
-                                a(href="img/content/blog3.jpg")
-                                    img(src="img/content/blog3.jpg")
-
-
-                            .text-holder
-                                h3 Наш проект опубликован в журнале “Дом и интерьер” выпуск за апрель 2014
-                                p.
-                                    Основным требованием к организации этого офисного пространства стало облегчение и визуальное увеличение чердачного этажа.
-                                    В процессе работы помещения были максимально расширены по форме крыши. Автору интерьера удалось запроектировать и создать два огромных панорамных окна 2х5 м,
-                                    которые полностью облегчили и осветили все дальние углы. В результате получились светлые и уютные зоны с незабываемым видом на город.
-                                    Изюминкой объекта стала запроектированная на крыше комната отдыха с круговым обзором. Камин и мебель придают офису элементы уюта и наполняют его домашней атмосферой.
-                                    В проекте были использованы натуральные отде- лочные материалы и современные технологии (система кондиционирования, система мультирум, умный дом).
-
-                            .info-holder
-                                .data 10.03.2016
-                                .social
-                                    .title-social Поделится
-                                    div(class="ya-share2", data-services="facebook,twitter,gplus", data-url="http://google.com.ua/#article1", data-counter="")
-                        #article2.item-article.cf
-                            .img-holder.blog-img
-                                a(href="img/content/blog2.jpg")
-                                    img(src="img/content/blog2.jpg")
-                                a(href="img/content/blog3.jpg")
-                                    img(src="img/content/blog3.jpg")
-                                a(href="img/content/blog4.jpg")
-                                    img(src="img/content/blog4.jpg")
-                            .text-holder
-                                h3 Наш проект опубликован в журнале “Архидея” выпуск за ноябрь 2014
-                                p.
-                                    Хозяевам хотелось, чтобы в их жили- ще было «легко дышать»: как известно, решение таких, на первый взгляд,
-                                    простых задач требует комплексного под- хода и исключительной изобретательности. Чтобы добавить воздуха,
-                                    в центральной части здания устроили «второй свет», сделали обильное остекление — и их расширяющий эффект усилили использованнымив оформлении светлыми тонами.
-                                p.
-                                    Отдельно поработали над визуальным облегчением массивных объектов.
-                                    В результате каминная вытяжка (длиной 7 м и весом около 3 т) буквально парит над очагом: ее подвесили на умело замаскированных фермах.
-                                    Предельно воздушна спускающа- яся в холл бетонная лестница: прозрачные перила, просветы между ступенями,
-                                    облицовка из белого мрамора делают ее изящной и легкой. Для выполне- ния гнутых перил пришлось отливать специальные формы,
-                                    так что на изготовление всей конструкции ушло в общей сложности полгода.
-                                p.
-                                    Первый этаж занимает общая зона, которая включает каминную, гостиную, банкетный зал, гостевую комнату.
-                                    Слева от холла располагается просторная кухня-столовая, где предусмотрены несколько сценариев приема пищи:
-                                    барная стойка — для легких завтраков, стол — для обедов в тесном семейном кругу.
-                                    На случай небольшой вечеринки имеется фуршетный островок и мягкий лаунжевый диван.
-                            .info-holder
-                                .data 10.03.2016
-                                .social
-                                    .title-social Поделится
-                                    div(class="ya-share2", data-services="facebook,twitter,gplus", data-url="http://google.com.ua/#article2", data-counter="")
-
-
-                        #article3.item-article.cf
-                            .img-holder.blog-img
-                                a(href="img/content/blog3.jpg")
-                                    img(src="img/content/blog3.jpg")
-                                a(href="img/content/blog5.jpg")
-                                    img(src="img/content/blog5.jpg")
-                                a(href="img/content/blog4.jpg")
-                                    img(src="img/content/blog4.jpg")
-
-                            .text-holder
-                                h3 Наш проект опубликован в журнале “Архидея” выпуск за ноябрь 2014
-                                p.
-                                    Авторы проекта сделали все, чтобы максималь- но приблизить объект к воде: фактически, он нависает над поверхностью озера.
-                                    Два из четырех фасадов снабдили огромными (6х3 м) окнами в пол: раздвинув их, интерьер и экстерьер объединяют в единое целое.
-                                    Для полноты эффекта архитектор не оставил ни порожков, ни даже оконных профилей — которые полностью утопили в плиточную кладку.
-                                    Обеспечивая отвод лишней влаги, дренаж- ные лотки соединили со специальными трубками в полу.
-                                    При оформлении объекта авторская команда исполь- зовала исключительно натуральные материалы: камень, металл, стекло, дерево.
-                                    На потолке — дубовый паркет, на полу — керамогранитом, для наружных работ исполь- зованы террасная доска и песчаник.
-                                    Лицевую часть мангала облицевали керамограни- том и сделали вогнутой: «неправильная» форма дала возможность избежать тяжеловесной монументальности
-                                    и в целом более эргономична. По обеим сторонам от жаровни — удобные ниши для дров.
-                                    Кухонные фасады покрыты черным гладким стеклом: расширяющий эффект глянцевых поверхностей усилен обрамляющей шкафы светодиодной подсветкой.
-                                    На фоне смоляных кухонных фасадов выразительно смотрится светлая столовая группа, а также белые све- тильники Beat от Тома Диксона..
-                            .info-holder
-                                .data 10.03.2016
-                                .social
-                                    .title-social Поделится
-                                    div(class="ya-share2", data-services="facebook,twitter,gplus", data-url="http://google.com.ua/#article3", data-counter="")
-
-
-
-                        #article4.item-article.cf
-                            .img-holder.blog-img
-                                a(href="img/content/blog4.jpg")
-                                    img(src="img/content/blog4.jpg")
-                                a(href="img/content/blog4.jpg")
-                                    img(src="img/content/blog3.jpg")
-                                a(href="img/content/blog5.jpg")
-                                    img(src="img/content/blog5.jpg")
-
-                            .text-holder
-                                h3 Наш проект опубликован в журнале “Архидея” выпуск за ноябрь 2014
-                                p.
-                                    Авторы проекта сделали все, чтобы максималь- но приблизить объект к воде: фактически, он нависает над поверхностью озера.
-                                    Два из четырех фасадов снабдили огромными (6х3 м) окнами в пол: раздвинув их, интерьер и экстерьер объединяют в единое целое.
-                                    Для полноты эффекта архитектор не оставил ни порожков, ни даже оконных профилей — которые полностью утопили в пли- точную кладку.
-                                    Обеспечивая отвод лишней влаги, дренаж- ные лотки соединили со специальными трубками в полу.
-                                p.
-                                    При оформлении объекта авторская команда исполь- зовала исключительно натуральные материалы: камень, металл, стекло, дерево.
-                                    На потолке — дубовый паркет, на полу — керамогранитом, для наружных работ исполь- зованы террасная доска и песчаник.
-                                    Лицевую часть мангала облицевали керамограни- том и сделали вогнутой: «неправильная» форма дала возможность
-                                    избежать тяжеловесной монументальности и в целом более эргономична. По обеим сторонам от жаровни — удобные ниши для дров.
-                                    Кухонные фасады покрыты черным гладким стеклом: расширяющий эффект глянцевых поверхностей усилен обрамляющей шкафы светодиодной подсветкой.
-                                    На фоне смоляных кухонных фасадов выразительно смотрится светлая столовая группа, а также белые све- тильники Beat от Тома Диксона..
-                            .info-holder
-                                .data 10.03.2016
-                                .social
-                                    .title-social Поделится
-                                    div(class="ya-share2", data-services="facebook,twitter,gplus", data-url="http://google.com.ua/#article1" , data-counter="")
-                        #article5.item-article.cf
-                            .img-holder.blog-img
-                                a(href="img/content/blog5.jpg")
-                                    img(src="img/content/blog5.jpg")
-                                a(href="img/content/blog3.jpg")
-                                    img(src="img/content/blog3.jpg")
-                                a(href="img/content/blog4.jpg")
-                                    img(src="img/content/blog4.jpg")
-
-                            .text-holder
-                                h3 Наш проект опубликован в журнале “Дом и интерьер” выпуск за апрель 2014
-                                p.
-                                    Основным требованием к организации этого офисного пространства стало облегчение и визуальное увеличение чердачного этажа.
-                                    В процессе работы помещения были макси- мально расширены по форме крыши.
-                                    Автору интерьера удалось запроектировать и создать два огромных панорамных окна 2х5 м, которые полностью облегчили и осве- тили все дальние углы.
-                                    В результате получились светлые и уютные зоны с незабываемым видом на город. Изюмин- кой объекта стала запроектированная на крыше комната отдыха с круговым обзором.
-                                    Камин и мебель придают офису элементы уюта и наполняют его домашней атмосферой.
-                                    В проекте были использованы натуральные отде- лочные материалы и современные технологии (система кондиционирования, система мультирум, умный дом).
-                            .info-holder
-                                .data 10.03.2016
-                                .social
-                                    .title-social Поделится
-                                    div(class="ya-share2", data-services="facebook,twitter,gplus", data-url="http://google.com.ua/#article2", data-counter="")
-
-
-                        #article6.item-article.cf
-                            .img-holder.blog-img
-                                a(href="img/content/blog6.jpg")
-                                    img(src="img/content/blog6.jpg")
-                                a(href="img/content/blog3.jpg")
-                                    img(src="img/content/blog3.jpg")
-                                a(href="img/content/blog4.jpg")
-                                    img(src="img/content/blog4.jpg")
-
-                            .text-holder
-                                h3 Наш проект опубликован в журнале “Архидея” выпуск за ноябрь 2014
-                                p.
-                                    Хозяевам хотелось, чтобы в их жилище было «легко дышать»: как известно,
-                                    решение таких, на первый взгляд, простых задач требует комплексного подхода и исключительной изобретательности.
-                                    Чтобы добавить воздуха, в центральной части здания устроили «второй свет», сделали обильное остекление — и их расширяющий
-                                    эффект усилили использованными в оформлении светлыми тонами.
-                                p.
-                                    Отдельно поработали над визуальным облегчением массивных объектов. В результате каминная вытяжка (длиной 7 м и весом около 3 т)
-                                    буквально парит над очагом: ее подвесили на умело замаски- рованных фермах. Предельно воздушна спускающаяся в холл бетонная лестница:
-                                    прозрачные перила, просветы между ступенями, облицовка из белого мрамора делают ее изящной и легкой.
-                                    Для выполнения гнутых перил пришлось отливать специальные формы, так что на изготовление всей конструкции ушло в общей сложности полгода.
-                                p.
-                                    Первый этаж занимает общая зона, которая включает каминную, гостиную, банкетный зал, гостевую комнату.
-                                    Слева от холла располагается просторная кухня-столовая, где предусмотрены несколько сценариев приема пищи:
-                                    барная стойка — для легких завтраков, стол — для обедов в тесном семейном кругу.
-                                    На случай небольшой вечеринки имеется фуршетный островок и мягкий лаунжевый диван.
-                            .info-holder
-                                .data 10.03.2016
-                                .social
-                                    .title-social Поделится
-                                    div(class="ya-share2", data-services="facebook,twitter,gplus", data-url="http://google.com.ua/#article3", data-counter="")
-
-
-
-
-
-
-
-
-
-                    include ./footer.jade
-
-
-
-        #blueimp-gallery.blueimp-gallery
-            .slides
-            a.prev
-                i(class="fa fa-angle-left fa-4x")
-            a.next
-                i(class="fa fa-angle-right fa-4x")
-            a.close
-                i(class="fa fa-times")
-            ol.indicator
+    #blueimp-gallery.blueimp-gallery
+                    .slides
+                    a.prev
+                        i(class="fa fa-angle-left fa-4x")
+                    a.next
+                        i(class="fa fa-angle-right fa-4x")
+                    a.close
+                        i(class="fa fa-times")
+                    ol.indicator

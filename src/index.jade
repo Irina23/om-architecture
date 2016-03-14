@@ -3,9 +3,10 @@ html(lang="ru")
     include ./head.jade
 
 
-    body(data-spy="scroll", data-target="#menu", data-offset="105")
+    body.home(data-spy="scroll", data-target="#menu", data-offset="105")
         .page_wrapper
 
+            #preloader
             #top
             include ./header.jade
 
@@ -14,14 +15,14 @@ html(lang="ru")
 
                         ul.slider
                             li
-                                a(href="#project_1", style="background: url('img/content/slider.jpg') no-repeat center; background-size: cover;")
+                                a(href="project.html", style="background: url('img/content/slider.jpg') no-repeat center; background-size: cover;")
 
 
                             li
-                                a(href="#project_1", style="background: url('img/content/slider.jpg') no-repeat center; background-size: cover;")
+                                a(href="project.html", style="background: url('img/content/slider.jpg') no-repeat center; background-size: cover;")
 
                             li
-                                a(href="#project_1", style="background: url('img/content/slider.jpg') no-repeat center; background-size: cover;")
+                                a(href="project.html", style="background: url('img/content/slider.jpg') no-repeat center; background-size: cover;")
 
 
 
@@ -40,21 +41,21 @@ html(lang="ru")
 
                             .project-list
                                 .item-project(data-cat="architecture design")
-                                    a(href="#project_1")
+                                    a(href="project.html")
                                         .img-holder
                                             img(src="img/content/project12.jpg")
                                         .text-holder
                                             .category Дизайн, Архитектура
                                             .title Проект загородного жилого дома пригород Киева
                                 .item-project(data-cat="architecture design")
-                                    a(href="#project_2")
+                                    a(href="project.html")
                                         .img-holder
                                             img(src="img/content/project9.jpg")
                                         .text-holder
                                             .category Дизайн, Архитектура
                                             .title Проект загородного жилого дома пригород Киева
                                 .item-project(data-cat="design")
-                                    a(href="#project_1")
+                                    a(href="project.html")
                                         .img-holder
                                             img(src="img/content/project10.jpg")
                                         .text-holder
@@ -62,35 +63,35 @@ html(lang="ru")
                                             .title Проект загородного жилого дома пригород Киева
 
                                 .item-project(data-cat="architecture")
-                                    a(href="#project_1")
+                                    a(href="project.html")
                                         .img-holder
                                             img(src="img/content/project8.jpg")
                                         .text-holder
                                             .category Архитектура
                                             .title Гостевой домик
                                 .item-project(data-cat="design objects")
-                                    a(href="#project_1")
+                                    a(href="project.html")
                                         .img-holder
                                             img(src="img/content/project7.jpg")
                                         .text-holder
                                             .category Дизайн, Предмет
                                             .title Проэкт стены около камина
                                 .item-project(data-cat="design")
-                                    a(href="#project_1")
+                                    a(href="project.html")
                                         .img-holder
                                             img(src="img/content/project1.jpg")
                                         .text-holder
                                             .category Дизайн
                                             .title Проект загородного жилого дома пригород Киева
                                 .item-project(data-cat="design")
-                                    a(href="#project_1")
+                                    a(href="project.html")
                                         .img-holder
                                             img(src="img/content/project6.jpg")
                                         .text-holder
                                             .category Дизайн
                                             .title Проект бильярд бара
                                 .item-project(data-cat="design architecture")
-                                    a(href="#project_1")
+                                    a(href="project.html")
                                         .img-holder
                                             img(src="img/content/project5.jpg")
                                         .text-holder
@@ -98,7 +99,7 @@ html(lang="ru")
                                             .title Проект загородного жилого дома пригород Киева
 
                                 .item-project(data-cat="design")
-                                    a(href="#project_1")
+                                    a(href="project.html")
                                         .img-holder
                                             img(src="img/content/project4.jpg")
                                         .text-holder
@@ -106,7 +107,7 @@ html(lang="ru")
                                             .title Проект загородного жилого дома пригород Киева
 
                                 .item-project(data-cat="design")
-                                    a(href="#project_1")
+                                    a(href="project.html")
                                         .img-holder
                                             img(src="img/content/project3.jpg")
                                         .text-holder
@@ -115,7 +116,7 @@ html(lang="ru")
 
 
                                 .item-project(data-cat="design architecture")
-                                    a(href="#project_1")
+                                    a(href="project.html")
                                         .img-holder
                                             img(src="img/content/project2.jpg")
                                         .text-holder
@@ -124,7 +125,7 @@ html(lang="ru")
 
 
                                 .item-project(data-cat="design")
-                                    a(href="#project_1")
+                                    a(href="project.html")
                                         .img-holder
                                             img(src="img/content/project11.jpg")
                                         .text-holder
@@ -366,5 +367,5 @@ html(lang="ru")
             a.next
                 i(class="fa fa-angle-right fa-4x")
             a.close
-                i(class="fa fa-times")
+
             ol.indicator
