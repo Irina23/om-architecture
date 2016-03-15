@@ -136,8 +136,7 @@ jQuery(document).ready(function() {
         jQuery('html, body').animate({ scrollTop:  jQuery('div[id="'+this.hash.slice(1)+'"]').offset().top }, 1000, function () {
             location.hash = $self.attr('href')
         } );
-        //var id  = jQuery(this).attr('href'), top = jQuery(id).height();
-        //jQuery('body,html').animate({scrollTop: top}, 1000);
+
 
     });
 
