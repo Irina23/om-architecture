@@ -220,16 +220,25 @@ img {
       font-weight: 700;
       line-height: 1em;
       text-decoration: underline;
-      color: #afafb0; }
-      #projects .project-nav li.active {
-        color: #000; }
+      color: #afafb0;
+      -webkit-transition: all 0.35s;
+      transition: all 0.35s; }
+      #projects .project-nav li.active, #projects .project-nav li:hover {
+        color: #000;
+        -webkit-transition: all 0.35s;
+        transition: all 0.35s; }
       #projects .project-nav li:first-child {
+        margin-left: 40px;
+        display: none; }
+      #projects .project-nav li:nth-child(2) {
         margin-left: 40px; }
   #projects .item-project {
     width: 33.3%;
     box-sizing: border-box;
     padding: 0 10px;
-    float: left; }
+    float: left;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s; }
     #projects .item-project .text-holder {
       color: #000;
       line-height: 1.5em; }
@@ -330,14 +339,58 @@ img {
       margin-bottom: 40px;
       text-align: justify;
       color: #000; }
+    #blog .item-article .text-holder h2 {
+      line-height: 1em;
+      margin-bottom: 40px;
+      font-size: 1.2em; }
+    #blog .item-article .text-holder h3 {
+      line-height: 1em;
+      margin-bottom: 40px;
+      font-size: 1.15em; }
+    #blog .item-article .text-holder h4 {
+      line-height: 1em;
+      margin-bottom: 40px;
+      font-size: 1.1em; }
+    #blog .item-article .text-holder h5 {
+      line-height: 1em;
+      margin-bottom: 40px;
+      font-size: 1.05em; }
+    #blog .item-article .text-holder h6 {
+      line-height: 1em;
+      margin-bottom: 40px;
+      font-size: 1em; }
+    #blog .item-article .text-holder table tr {
+      background: rgba(0, 0, 0, 0.7); }
+      #blog .item-article .text-holder table tr td, #blog .item-article .text-holder table tr th {
+        padding: 20px;
+        color: #fff;
+        line-height: 1em;
+        font-weight: 400; }
+      #blog .item-article .text-holder table tr:nth-child(2n) {
+        background: rgba(0, 0, 0, 0.5); }
+    #blog .item-article .text-holder a {
+      color: #6c6c6c;
+      line-height: 1.3em;
+      text-align: justify;
+      font-weight: 700;
+      text-decoration: underline; }
     #blog .item-article .text-holder p {
       line-height: 1.3em;
       color: #6c6c6c;
       text-align: justify; }
     #blog .item-article .text-holder ul, #blog .item-article .text-holder ol {
       margin: 0;
+      margin-bottom: 30px;
       padding-left: 30px;
       text-align: left; }
+    #blog .item-article .text-holder dl {
+      text-align: left;
+      margin-bottom: 30px; }
+      #blog .item-article .text-holder dl dt {
+        font-weight: 700; }
+      #blog .item-article .text-holder dl dd {
+        font-weight: 400;
+        margin-left: 30px; }
     #blog .item-article .text-holder ul li {
       list-style-type: disc; }
     #blog .item-article .text-holder ol li {
@@ -409,7 +462,16 @@ img {
   display: none; }
   #footer .mobile_contacts #map2 {
     height: 270px;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    position: relative; }
+    #footer .mobile_contacts #map2 #footer-map {
+      height: 270px; }
+    #footer .mobile_contacts #map2 #map-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
   #footer .mobile_contacts .info-contacts {
     margin-bottom: 30px; }
     #footer .mobile_contacts .info-contacts p, #footer .mobile_contacts .info-contacts a {
@@ -509,11 +571,11 @@ img {
       margin-bottom: 50px; }
       .project .content .text-holder .text-left .info-project .team .title {
         margin-bottom: 30px; }
-    .project .content .text-holder .text-left .info-project span {
+    .project .content .text-holder .text-left .info-project span, .project .content .text-holder .text-left .info-project p {
       display: block;
       font-size: 1.25em;
       line-height: 1.3em; }
-      .project .content .text-holder .text-left .info-project span.title {
+      .project .content .text-holder .text-left .info-project span.title, .project .content .text-holder .text-left .info-project p.title {
         font-weight: 700; }
     .project .content .text-holder .text-left .social span {
       display: inline-block !important; }
@@ -573,22 +635,67 @@ img {
   .project .content .text-holder .text-right {
     float: left;
     width: 60%; }
+    .project .content .text-holder .text-right h1, .project .content .text-holder .text-right h2, .project .content .text-holder .text-right h3, .project .content .text-holder .text-right h4, .project .content .text-holder .text-right h5, .project .content .text-holder .text-right h6 {
+      color: #000; }
     .project .content .text-holder .text-right h1 {
       line-height: 1em;
       margin-bottom: 40px;
       font-size: 1.25em; }
+    .project .content .text-holder .text-right h2 {
+      line-height: 1em;
+      margin-bottom: 40px;
+      font-size: 1.2em; }
+    .project .content .text-holder .text-right h3 {
+      line-height: 1em;
+      margin-bottom: 40px;
+      font-size: 1.15em; }
+    .project .content .text-holder .text-right h4 {
+      line-height: 1em;
+      margin-bottom: 40px;
+      font-size: 1.1em; }
+    .project .content .text-holder .text-right h5 {
+      line-height: 1em;
+      margin-bottom: 40px;
+      font-size: 1.05em; }
+    .project .content .text-holder .text-right h6 {
+      line-height: 1em;
+      margin-bottom: 40px;
+      font-size: 1em; }
     .project .content .text-holder .text-right .description {
       color: #6c6c6c;
       line-height: 1.3em;
       text-align: justify;
       font-weight: 700; }
+      .project .content .text-holder .text-right .description table tr {
+        background: rgba(0, 0, 0, 0.7); }
+        .project .content .text-holder .text-right .description table tr td, .project .content .text-holder .text-right .description table tr th {
+          padding: 20px;
+          color: #fff;
+          line-height: 1em;
+          font-weight: 400; }
+        .project .content .text-holder .text-right .description table tr:nth-child(2n) {
+          background: rgba(0, 0, 0, 0.5); }
+      .project .content .text-holder .text-right .description a {
+        color: #6c6c6c;
+        line-height: 1.3em;
+        text-align: justify;
+        font-weight: 700;
+        text-decoration: underline; }
       .project .content .text-holder .text-right .description ul, .project .content .text-holder .text-right .description ol {
         margin: 0;
+        margin-bottom: 30px;
         padding-left: 30px; }
       .project .content .text-holder .text-right .description ul li {
         list-style-type: disc; }
       .project .content .text-holder .text-right .description ol li {
         list-style-type: decimal; }
+      .project .content .text-holder .text-right .description dl {
+        margin-bottom: 30px; }
+        .project .content .text-holder .text-right .description dl dt {
+          font-weight: 700; }
+        .project .content .text-holder .text-right .description dl dd {
+          font-weight: 400;
+          margin-left: 30px; }
 
 @media screen and (max-width: 1200px) {
   #header #menu li {
@@ -614,12 +721,10 @@ img {
         margin: auto;
         display: table-cell;
         text-align: center;
-        font-size: 0.75em; }
+        font-size: 1em; }
         #projects .project-nav li:first-child {
           margin: auto;
           text-align: left; }
-        #projects .project-nav li:last-child {
-          text-align: right; }
     #projects .content {
       margin: auto;
       padding: 0; }
@@ -654,7 +759,7 @@ img {
     #about .content {
       padding: 20px 20px 70px; }
       #about .content .img-holder {
-        margin-bottom: 10px; }
+        margin-bottom: 20px; }
   #blog .content {
     padding: 0; }
     #blog .content .item-article {
@@ -715,22 +820,24 @@ img {
       .project .content .text-holder .text-left, .project .content .text-holder .text-right {
         float: none;
         width: 100%; }
-      .project .content .text-holder .text-left .info-project span {
-        font-size: 1em; }
-      .project .content .text-holder .text-left .info-project .team {
-        margin-bottom: 30px;
-        margin-top: 30px; }
-        .project .content .text-holder .text-left .info-project .team span {
+      .project .content .text-holder .text-left {
+        margin-bottom: 30px; }
+        .project .content .text-holder .text-left .info-project span, .project .content .text-holder .text-left .info-project p {
           font-size: 1em; }
-        .project .content .text-holder .text-left .info-project .team .title {
+        .project .content .text-holder .text-left .info-project .team {
+          margin-bottom: 30px;
+          margin-top: 30px; }
+          .project .content .text-holder .text-left .info-project .team span, .project .content .text-holder .text-left .info-project .team p {
+            font-size: 1em; }
+          .project .content .text-holder .text-left .info-project .team .title {
+            margin-bottom: 0; }
+        .project .content .text-holder .text-left .social .title-social {
+          margin-bottom: 10px;
+          font-size: 1em; }
+        .project .content .text-holder .text-left .social a {
           margin-bottom: 0; }
-      .project .content .text-holder .text-left .social .title-social {
-        margin-bottom: 10px;
-        font-size: 1em; }
-      .project .content .text-holder .text-left .social a {
-        margin-bottom: 0; }
-        .project .content .text-holder .text-left .social a span.ya-share2__title {
-          font-size: 1em; }
+          .project .content .text-holder .text-left .social a span.ya-share2__title {
+            font-size: 1em; }
       .project .content .text-holder .text-right h1 {
         text-align: center;
         margin-bottom: 30px; }

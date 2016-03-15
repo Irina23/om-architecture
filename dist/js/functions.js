@@ -23,7 +23,7 @@ jQuery(document).ready(function() {
             //gutter: gutter_in_pixels
         });
         jQuery('.slider').bxSlider({
-            //auto: true
+               auto: true
             //adaptiveHeight: true
         });
 
@@ -31,7 +31,7 @@ jQuery(document).ready(function() {
 
 
         // Create a map object and specify the DOM element for display.
-        var map2 = new google.maps.Map(document.getElementById('map2'), {
+        var map2 = new google.maps.Map(document.getElementById('footer-map'), {
             center: {lat:50.461539, lng: 30.5073035},
             scrollwheel: false,
             zoom: 16
@@ -40,6 +40,13 @@ jQuery(document).ready(function() {
             position: {lat:50.461539, lng: 30.5073035},
             map: map2
             //title: 'Hello World!'
+        });
+
+
+        jQuery("#map-wrapper").on("click", function(){
+
+            jQuery(this).remove();
+
         });
 
 
@@ -116,7 +123,7 @@ jQuery(document).ready(function() {
             return;
         }else{
             jQuery('.item-project').each(function(){
-                if(jQuery(this).attr('data-cat').indexOf(customType) < 0) jQuery(this).css("opacity", 0.7); else jQuery(this).css("opacity", 1);
+                if(jQuery(this).attr('data-cat').indexOf(customType) < 0) jQuery(this).css("opacity", 0.5); else jQuery(this).css("opacity", 1);
             });
         }
 
@@ -130,15 +137,18 @@ jQuery(document).ready(function() {
 
 
 
-    jQuery('#menu.main, #menu-mobile.main').find('a').on("click", function (event) {
+    jQuery('#menu.main, #menu-mobile.main,.home .logo').find('a').on("click", function (event) {
         event.preventDefault();
         var $self = $(this);
         jQuery('html, body').animate({ scrollTop:  jQuery('div[id="'+this.hash.slice(1)+'"]').offset().top }, 1000, function () {
             location.hash = $self.attr('href')
+
         } );
 
 
+
     });
+
 
 
 

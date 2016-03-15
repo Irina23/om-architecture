@@ -275,18 +275,23 @@ img
       line-height: 1em
       text-decoration: underline
       color: #afafb0
-      &.active
+      transition: all 0.35s
+      &.active, &:hover
         color: #000
+        transition: all 0.35s
 
       &:first-child
         margin-left: 40px
-
+        display: none
+      &:nth-child(2)
+        margin-left: 40px
 
   .item-project
     width: 33.3%
     box-sizing: border-box
     padding: 0 10px
     float: left
+    transition: all 0.35s
 
 
     .text-holder
@@ -438,6 +443,46 @@ img
         margin-bottom: 40px
         text-align: justify
         color: #000
+
+      h2
+        line-height: 1em
+        margin-bottom: 40px
+        font-size: 1.2em
+      h3
+          line-height: 1em
+          margin-bottom: 40px
+          font-size: 1.15em
+      h4
+          line-height: 1em
+          margin-bottom: 40px
+          font-size: 1.1em
+      h5
+          line-height: 1em
+          margin-bottom: 40px
+          font-size: 1.05em
+      h6
+          line-height: 1em
+          margin-bottom: 40px
+          font-size: 1em
+
+      table
+        tr
+          background: rgba(0, 0, 0, 0.7)
+          td,th
+            padding: 20px
+            color: #fff
+            line-height: 1em
+            font-weight: 400
+
+          &:nth-child(2n)
+            background: rgba(0, 0, 0, 0.5)
+
+      a
+        color: #6c6c6c
+        line-height: 1.3em
+        text-align: justify
+        font-weight: 700
+        text-decoration: underline
       p
         //font-size: 16px
         line-height: 1.3em
@@ -445,9 +490,17 @@ img
         text-align: justify
       ul, ol
         margin: 0
+        margin-bottom: 30px
         padding-left: 30px
         text-align: left
-
+      dl
+        text-align: left
+        margin-bottom: 30px
+        dt
+          font-weight: 700
+        dd
+          font-weight: 400
+          margin-left: 30px
       ul
           li
             list-style-type: disc
@@ -526,6 +579,15 @@ img
     #map2
       height: 270px
       margin-bottom: 30px
+      position: relative
+      #footer-map
+        height: 270px
+      #map-wrapper
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
     .info-contacts
       margin-bottom: 30px
 
@@ -648,7 +710,7 @@ img
             margin-bottom: 50px
             .title
               margin-bottom: 30px
-          span
+          span,p
             display: block
             font-size: 1.25em
             line-height: 1.3em
@@ -715,25 +777,78 @@ img
       .text-right
         float: left
         width: 60%
+        h1,h2,h3,h4,h5,h6
+          color: #000
         h1
           line-height: 1em
           margin-bottom: 40px
           font-size: 1.25em
+        h2
+          line-height: 1em
+          margin-bottom: 40px
+          font-size: 1.2em
+        h3
+          line-height: 1em
+          margin-bottom: 40px
+          font-size: 1.15em
+        h4
+          line-height: 1em
+          margin-bottom: 40px
+          font-size: 1.1em
+        h5
+          line-height: 1em
+          margin-bottom: 40px
+          font-size: 1.05em
+        h6
+          line-height: 1em
+          margin-bottom: 40px
+          font-size: 1em
+
+
         .description
           color: #6c6c6c
           line-height: 1.3em
           text-align: justify
           font-weight: 700
+          table
+            tr
+              background: rgba(0, 0, 0, 0.7)
+              td,th
+                padding: 20px
+                color: #fff
+                line-height: 1em
+                font-weight: 400
+
+              &:nth-child(2n)
+                background: rgba(0, 0, 0, 0.5)
+
+
+          a
+            color: #6c6c6c
+            line-height: 1.3em
+            text-align: justify
+            font-weight: 700
+            text-decoration: underline
           ul, ol
             margin: 0
+            margin-bottom: 30px
             padding-left: 30px
 
           ul
+
             li
               list-style-type: disc
           ol
             li
               list-style-type: decimal
+
+          dl
+            margin-bottom: 30px
+            dt
+              font-weight: 700
+            dd
+              font-weight: 400
+              margin-left: 30px
           p
             //font-size: 1.25em
             //color: #6c6c6c
@@ -772,12 +887,12 @@ img
         margin: auto
         display: table-cell
         text-align: center
-        font-size: 0.75em
+        font-size: 1em
         &:first-child
           margin: auto
           text-align: left
         &:last-child
-          text-align: right
+          //text-align: right
     .content
       margin: auto
       padding: 0
@@ -822,7 +937,7 @@ img
     .content
       padding: 20px 20px 70px
       .img-holder
-        margin-bottom: 10px
+        margin-bottom: 20px
 
   #blog
     .content
@@ -895,13 +1010,14 @@ img
           float: none
           width: 100%
         .text-left
+          margin-bottom: 30px
           .info-project
-            span
+            span,p
               font-size: 1em
             .team
               margin-bottom: 30px
               margin-top: 30px
-              span
+              span,p
                 font-size: 1em
               .title
                 margin-bottom: 0
