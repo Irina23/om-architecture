@@ -1,6 +1,26 @@
 doctype html
 html(lang="ru")
-    include ./head.jade
+    head
+        link(href="css/main.css" rel="stylesheet" type="text/css")
+        link(href="bower_components/normalize-css/normalize.css" rel="stylesheet" type="text/css")
+        link(href="css/template.css" rel="stylesheet" type="text/css")
+        link(href="css/jquery.bxslider.css" rel="stylesheet" type="text/css")
+        link(href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css")
+        link(href="css/blueimp-gallery.css" rel="stylesheet" type="text/css")
+        script(src="bower_components/jquery/dist/jquery.js")
+        script(src="js/functions.js")
+        script(src="bower_components/jquery_lazyload/jquery.lazyload.js")
+        script(src="js/blueimp-gallery.min.js")
+        script(src="js/jquery.bxslider.js")
+        script(src="js/masonry.pkgd.min.js")
+        script(src="js/scrollspy.js")
+        script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?v=3')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
+        meta(name='format-detection', content='telephone=no')
+        meta(http-equiv='content-type', content='text/html; charset=utf-8')
+        script(type='text/javascript', src='//yastatic.net/es5-shims/0.0.2/es5-shims.min.js', charset='utf-8')
+        script(type='text/javascript', src='//yastatic.net/share2/share.js', charset='utf-8')
+        link(href='https://fonts.googleapis.com/css?family=Roboto:400,600,700&subset=latin,cyrillic', rel='stylesheet', type='text/css')
 
 
     body.project(data-spy="scroll", data-target="#menu", data-offset="105")
@@ -11,29 +31,54 @@ html(lang="ru")
             header#header
                 .content
                     .logo
-                        a(href="#top")
+                        a(href="index.html#top")
                             img(src="img/content/logo.png")
 
                     #menu
                         ul.nav.nav-tabs
                             li.active
-                                a(href="#top") Главная
+                                a(href="index.html#top") Главная
                             li
-                                a(href="#projects") Проекты
+                                a(href="index.html#projects") Проекты
                             li
-                                a(href="#about") О нас
+                                a(href="index.html#about") О нас
 
                             li
-                                a(href="#blog") Пресса
+                                a(href="index.html#blog") Пресса
                             li
-                                a(href="#contacts") Контакты
+                                a(href="index.html#contacts") Контакты
                     .lang
                         .ru.active
                             a(href="#") ru
                         .en
                             a(href="#") en
 
-
+                    .mobile-navbar
+                        .navbar-toggle(type="button")
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+                        .mobile-navbar-holder
+                            .logo
+                                a(href="#top")
+                                    img(src="img/content/logo_w.png")
+                            #menu
+                                ul.nav.nav-tabs
+                                    li.active
+                                        a(href="index.html#top") Главная
+                                    li
+                                        a(href="index.html#projects") Проекты
+                                    li
+                                        a(href="index.html#about") О нас
+                                    li
+                                        a(href="index.html#blog") Пресса
+                                    li
+                                        a(href="index.html#footer") Контакты
+                            .lang
+                                .ru.active
+                                    a(href="#") ru
+                                .en
+                                    a(href="#") en
 
 
 
@@ -42,41 +87,71 @@ html(lang="ru")
 
             .container
                 .content
-                    .img-holder
-                        img(src="img/content/project_img0.jpg")
-                    .text-holder
-                        .text-left
-                            span.title Год: 2015
-                            span.title Киевская область
-                            span.title Команда
-                            span Игорь Фоменко
-                            span Андрей Медведь
-                        .text-right
-                            h1 Copper house
-                            p.
-                                Современная резиденция площадью 450 м2 построена в киевской области на берегу реки. Перед архитекторами из OM-architecture стояла задача создать современный уютный загородный дом с элементами "Альпийского шале". Для внутреннего оформления выбрали натуральные материалы: медь, камень, дерево. Сочетание современных форм и классических элементов декора сформировали уникальный характер шале.
-                                Планировка здания простая и функциональная. Каминный зал, кухню, столовую, холл, гардеробную - объединяет куб покрытый натуральной медью. Это центральный элемент 1-го этажа. Внутри него поместились: шкаф, встроенная кухня, несущие конструкции здания, и декоративная ниша с растениями. Весь второй этаж заняли спальни с ванными комнатами. Из каждой спальни есть выход на персональную террасу. В цокольном этаже спряталась комната отдых с бильярдным столом, а также все технические помещения. Основным акцентом бильярдной получился узор на бетонном потолке, на который пошло 150 м кабеля. Особое внимание на объекте уделялось техническим деталям и мелочам интерьера (вентиляционные решетки, душевые трапы, освещение, двери и тд..)
+                    .modal-holder
 
-                    .img-holder
-                        img(src="img/content/project_img1.jpg")
-                    .img-holder
-                        img(src="img/content/project_img2.jpg")
-                    .img-holder
-                        img(src="img/content/project_img3.jpg")
-                    .img-holder
-                        img(src="img/content/project_img4.jpg")
-                    .img-holder
-                        img(src="img/content/project_img5.jpg")
-                    .img-holder
-                        img(src="img/content/project_img6.jpg")
-                    .img-holder
-                        img(src="img/content/project_img7.jpg")
-                    .img-holder
-                        img(src="img/content/project_img8.jpg")
-                    .img-holder
-                        img(src="img/content/project_img9.jpg")
-                    .img-holder
-                        img(src="img/content/project_img10.jpg")
+
+                        .close-modal
+
+                        .modal-content
+
+                            .img-holder
+                                img.lazy(data-original="img/content/project_img0.jpg")
+                            .text-holder.cf
+                                .text-left
+                                    .info-project
+                                        span.title Год: 2015
+                                        span.title Киевская область
+                                        .team
+                                            span.title Команда
+                                            span Игорь Фоменко
+                                            span Андрей Медведь
+                                    .social
+                                        .title-social Поделится
+                                        div(class="ya-share2", data-services="facebook,twitter,gplus", data-url="http://google.com.ua/#article2", data-counter="")
+
+
+                                .text-right
+                                    h1 Copper house
+                                    .description
+                                        p.
+                                            Современная резиденция площадью 450 м2 построена в киевской области на берегу реки.
+                                            Перед архитекторами из OM-architecture стояла задача создать современный уютный загородный дом с элементами "Альпийского шале".
+                                            Для внутреннего оформления выбрали натуральные материалы: медь, камень, дерево.
+                                            Сочетание современных форм и классических элементов декора сформировали уникальный характер шале.
+                                        p.
+                                            Планировка здания простая и функциональная.
+                                            Каминный зал, кухню, столовую, холл, гардеробную - объединяет куб покрытый натуральной медью.
+                                            Это центральный элемент 1-го этажа. Внутри него поместились: шкаф, встроенная кухня, несущие конструкции здания, и декоративная ниша
+                                            с растениями. Весь второй этаж заняли спальни с ванными комнатами. Из каждой спальни есть выход на персональную террасу.
+                                            В цокольном этаже спряталась комната отдых с бильярдным столом, а также все технические помещения.
+                                            Основным акцентом бильярдной получился узор на бетонном потолке, на который пошло 150 м кабеля.
+                                            Особое внимание на объекте уделялось техническим деталям и мелочам интерьера (вентиляционные решетки,
+                                            душевые трапы, освещение, двери и тд..)
+
+
+                            .img-holder
+                                img.lazy(data-original="img/content/project_img1.jpg")
+                            .img-holder
+                                img.lazy(data-original="img/content/project_img2.jpg")
+                            .img-holder
+                                img.lazy(data-original="img/content/project_img3.jpg")
+                            .img-holder
+                                img.lazy(data-original="img/content/project_img4.jpg")
+                            .img-holder
+                                img.lazy(data-original="img/content/project_img5.jpg")
+                            .img-holder
+                                img.lazy(data-original="img/content/project_img6.jpg")
+                            .img-holder
+                                img.lazy(data-original="img/content/project_img7.jpg")
+                            .img-holder
+                                img.lazy(data-original="img/content/project_img8.jpg")
+                            .img-holder
+                                img.lazy(data-original="img/content/project_img9.jpg")
+                            .img-holder
+                                img.lazy(data-original="img/content/project_img10.jpg")
+
+
+
             include ./footer.jade
 
 

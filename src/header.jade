@@ -6,13 +6,7 @@ header#header
                     a(href="#top")
                         img(src="img/content/logo.png")
 
-
-
-
-
-
-
-                #menu
+                #menu.main
                     ul.nav.nav-tabs
                         li.active
                                 a(href="#top") Главная
@@ -30,6 +24,34 @@ header#header
                         a(href="#") ru
                     .en
                         a(href="#") en
+
+                .mobile-navbar
+                    .navbar-toggle(type="button")
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    .mobile-navbar-holder
+                        .logo
+                            a(href="#top")
+                                img(src="img/content/logo_w.png")
+                        #menu
+                            ul.nav.nav-tabs
+                                li.active
+                                    a(href="#top") Главная
+                                li
+                                    a(href="#projects") Проекты
+                                li
+                                    a(href="#about") О нас
+
+                                li
+                                    a(href="#blog") Пресса
+                                li
+                                    a(href="#footer") Контакты
+                        .lang
+                            .ru.active
+                                a(href="#") ru
+                            .en
+                                a(href="#") en
 
 
 

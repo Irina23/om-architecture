@@ -126,6 +126,7 @@
 }
 .blueimp-gallery > .close {
 
+  margin: 0;
   right: 15px;
   left: auto;
   /*margin: -15px;*/

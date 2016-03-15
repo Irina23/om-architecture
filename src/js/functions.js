@@ -2,24 +2,72 @@ jQuery(document).ready(function() {
 
 
 
+    jQuery(function() {
+        jQuery("img.lazy").lazyload();
+    });
+
     jQuery(window).load(function() {
-        $('#preloader').fadeOut('slow',function(){$(this).remove();});
-        gutter_in_pixels = jQuery(".item-project").width() * 0.02;
+        jQuery('#preloader').fadeOut('slow',function(){
+            if (location.hash) {
+                //console.log(location.hash)
+            //    TODO
+                jQuery('html, body').animate({ scrollTop:  jQuery(location.hash).offset().top - 52 }, 1000);
+            }
+            jQuery(this).remove();
+        });
+        //gutter_in_pixels = jQuery(".item-project").width() * 0.02;
         jQuery('.project-list').masonry({
             // options
             itemSelector: '.item-project',
-            resizeable: true,
-            gutter: gutter_in_pixels
+            resizeable: true
+            //gutter: gutter_in_pixels
         });
         jQuery('.slider').bxSlider({
-            auto: true
+            //auto: true
+            //adaptiveHeight: true
         });
 
 
 
+
+        // Create a map object and specify the DOM element for display.
+        var map2 = new google.maps.Map(document.getElementById('map2'), {
+            center: {lat:50.461539, lng: 30.5073035},
+            scrollwheel: false,
+            zoom: 16
+        });
+        var marker = new google.maps.Marker({
+            position: {lat:50.461539, lng: 30.5073035},
+            map: map2
+            //title: 'Hello World!'
+        });
+
+
+        jQuery(".navbar-toggle").on("click", function(){
+            jQuery(".mobile-navbar-holder").slideToggle();
+            jQuery(this).toggleClass("active");
+            jQuery(".mobile-navbar").toggleClass("active");
+            jQuery("#header").toggleClass("active");
+        });
+
+        $(window).trigger('resize');
+
+    });
+
+    jQuery(".mobile-navbar a").on("click", function(){
+
+        if (jQuery(window).width() <= 959) {
+            jQuery(".mobile-navbar-holder").slideToggle();
+            jQuery(".navbar-toggle").toggleClass("active");
+            jQuery(".mobile-navbar").toggleClass("active");
+            jQuery("#header").toggleClass("active");
+        }
 
 
     });
+
+
+
 
 
     /*var posts = jQuery('.item-project');
@@ -82,9 +130,14 @@ jQuery(document).ready(function() {
 
 
 
-    jQuery(document).on("click","a[href^='#']", function (event) {
+    jQuery('#menu.main, #menu-mobile.main').find('a').on("click", function (event) {
         event.preventDefault();
-        jQuery('html, body').animate({ scrollTop:  jQuery('div[id="'+this.hash.slice(1)+'"]').offset().top }, 1000 );
+        var $self = $(this);
+        jQuery('html, body').animate({ scrollTop:  jQuery('div[id="'+this.hash.slice(1)+'"]').offset().top }, 1000, function () {
+            location.hash = $self.attr('href')
+        } );
+        //var id  = jQuery(this).attr('href'), top = jQuery(id).height();
+        //jQuery('body,html').animate({scrollTop: top}, 1000);
 
     });
 
@@ -92,21 +145,31 @@ jQuery(document).ready(function() {
 
 
     // navigation
-    $('#projects, .slider').find('a').on('click', function (e) {
+    jQuery('#projects, .slider').find('a').on('click', function (e) {
         e.preventDefault();
-        var $self = $(this);
+        var $self = jQuery(this);
         var href = $self.attr('href');
 
         if (href == "#") {
 
         } else {
 
-            $('body').animate({
+            jQuery('body').animate({
                 'opacity': 0
             }, 600, function () {
                 document.location.href = href;
             });
         }
+    });
+    jQuery('.close-modal').on('click', function (e) {
+        e.preventDefault();
+
+        jQuery('body').animate({
+                'opacity': 0
+            }, 600, function () {
+                document.location.href = "index.html";
+        });
+
     });
 
 
