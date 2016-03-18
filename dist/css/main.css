@@ -216,7 +216,7 @@ img {
 
 #projects {
   background: #f9fafb;
-  padding: 45px 0 25px;
+  padding: 52px 0 25px;
   overflow: hidden; }
   #projects .content {
     margin: 0 -10px; }
@@ -241,8 +241,6 @@ img {
       #projects .project-nav li:first-child {
         margin-left: 40px;
         display: none; }
-      #projects .project-nav li:nth-child(2) {
-        margin-left: 40px; }
   #projects .item-project {
     width: 33.3%;
     box-sizing: border-box;
@@ -265,7 +263,7 @@ img {
         text-decoration: none; }
 
 #about .content {
-  padding: 50px 90px; }
+  padding: 52px 90px; }
   #about .content p {
     color: #6c6c6c;
     line-height: 1.3em;
@@ -278,9 +276,13 @@ img {
     width: 100%; }
 
 #contacts {
-  background: #f7f7f7; }
+  background: #f7f7f7;
+  height: 100vh; }
+  #contacts .info-contacts {
+    height: 70px;
+    overflow: hidden; }
   #contacts .content {
-    padding: 50px 45px 30px; }
+    padding: 52px 45px 30px; }
     #contacts .content p {
       line-height: 1.3em;
       font-weight: 600; }
@@ -289,13 +291,21 @@ img {
       line-height: 1.3em;
       font-weight: 600; }
   #contacts #map {
-    height: 690px;
+    height: calc(100vh - 182px);
     width: 100%;
     margin-bottom: 30px; }
   #contacts .info-left {
     float: left; }
   #contacts .info-right {
     float: right; }
+    #contacts .info-right > div {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 20px;
+      height: 60px;
+      overflow: hidden; }
+      #contacts .info-right > div:last-child {
+        margin-right: 0; }
   #contacts .social {
     margin-top: 5px; }
     #contacts .social li {
@@ -324,7 +334,7 @@ img {
         margin-right: 0; }
 
 #blog .content {
-  padding: 50px 45px 80px; }
+  padding: 52px 45px 80px; }
 
 #blog .item-article {
   margin-bottom: 50px;
@@ -576,6 +586,8 @@ img {
   text-align: center;
   width: 100%;
   margin-bottom: 40px; }
+  .project .content .img-holder img {
+    width: 100%; }
 
 .project .content .text-holder {
   padding: 50px; }
@@ -725,7 +737,7 @@ img {
   #slider {
     padding: 0; }
   #projects {
-    padding: 30px 20px; }
+    padding: 43px 20px 30px; }
     #projects .project-nav {
       margin: 0 auto 20px; }
       #projects .project-nav ul {
@@ -773,11 +785,12 @@ img {
   #about {
     background: #ebebeb; }
     #about .content {
-      padding: 20px 20px 70px; }
+      padding: 43px 20px 70px; }
       #about .content .img-holder {
         margin-bottom: 20px; }
   #blog .content {
-    padding: 0; }
+    padding: 0;
+    padding-top: 22px; }
     #blog .content .item-article {
       padding: 20px;
       margin-bottom: 0; }
@@ -818,7 +831,8 @@ img {
   #footer .mobile_contacts {
     display: block; }
   #footer .content {
-    padding: 20px; }
+    padding: 20px;
+    padding-top: 43px; }
     #footer .content .copyright {
       display: block;
       float: none;

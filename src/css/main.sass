@@ -274,7 +274,7 @@ img
 #projects
 
   background: #f9fafb
-  padding: 45px 0 25px
+  padding: 52px 0 25px
   overflow: hidden
   .content
     margin: 0 -10px
@@ -303,7 +303,7 @@ img
         margin-left: 40px
         display: none
       &:nth-child(2)
-        margin-left: 40px
+        //margin-left: 40px
 
   .item-project
     width: 33.3%
@@ -340,7 +340,7 @@ img
 
 #about
   .content
-    padding: 50px 90px
+    padding: 52px 90px
     p
       //font-size: 16px
       color: #6c6c6c
@@ -364,8 +364,12 @@ img
 
 #contacts
   background: #f7f7f7
+  height: 100vh
+  .info-contacts
+    height: 70px
+    overflow: hidden
   .content
-    padding: 50px 45px 30px
+    padding: 52px 45px 30px
     p
       //font-size: 15px
       line-height: 1.3em
@@ -379,13 +383,22 @@ img
       font-weight: 600
 
   #map
-    height: 690px
+    //height: 690px
+    height: calc(100vh - 182px)
     width: 100%
     margin-bottom: 30px
   .info-left
     float: left
   .info-right
     float: right
+    >div
+      display: inline-block
+      vertical-align: top
+      margin-right: 20px
+      height: 60px
+      overflow: hidden
+      &:last-child
+        margin-right: 0
 
   .social
     margin-top: 5px
@@ -429,7 +442,7 @@ img
 
 #blog
   .content
-    padding: 50px 45px 80px
+    padding: 52px 45px 80px
   .item-article
     margin-bottom: 50px
     text-align: center
@@ -729,6 +742,8 @@ img
       text-align: center
       width: 100%
       margin-bottom: 40px
+      img
+        width: 100%
 
     .text-holder
       padding: 50px
@@ -909,7 +924,7 @@ img
   #slider
     padding: 0
   #projects
-    padding: 30px 20px
+    padding: 43px 20px 30px
     .project-nav
       margin: 0 auto 20px
       ul
@@ -970,13 +985,14 @@ img
   #about
     background: #ebebeb
     .content
-      padding: 20px 20px 70px
+      padding: 43px 20px 70px
       .img-holder
         margin-bottom: 20px
 
   #blog
     .content
       padding: 0
+      padding-top: 22px
       .item-article
         padding: 20px
         margin-bottom: 0
@@ -1023,6 +1039,7 @@ img
       display: block
     .content
       padding: 20px
+      padding-top: 43px
       .copyright
         display: block
         float: none
