@@ -432,27 +432,25 @@ img {
       position: relative;
       -webkit-transition: all 0.35s;
       transition: all 0.35s;
-      margin-bottom: 10px; }
-      #blog .item-article .social a:hover {
-        text-decoration: none;
-        color: #000;
-        -webkit-transition: all 0.35s;
-        transition: all 0.35s; }
-        #blog .item-article .social a:hover span.ya-share2__badge {
-          -webkit-transition: all 0.35s;
-          transition: all 0.35s;
-          top: 0; }
-        #blog .item-article .social a:hover span.ya-share2__title {
-          top: -26px;
-          -webkit-transition: all 0.35s;
-          transition: all 0.35s;
-          opacity: 0; }
+      margin-bottom: 10px;
+      /*&:hover
+          text-decoration: none
+          color: #000
+          transition: all 0.35s
+          span.ya-share2__badge
+            transition: all 0.35s
+            top: 0
+          span.ya-share2__title
+            top: -26px
+            transition: all 0.35s
+            opacity: 0*/ }
       #blog .item-article .social a span.ya-share2__badge {
         position: absolute;
         top: -26px;
         right: 0;
         -webkit-transition: all 0.35s;
-        transition: all 0.35s; }
+        transition: all 0.35s;
+        opacity: 0; }
       #blog .item-article .social a span.ya-share2__title {
         position: absolute;
         top: 0;
@@ -613,27 +611,25 @@ img {
       -webkit-transition: all 0.35s;
       transition: all 0.35s;
       margin-bottom: 10px;
-      text-align: left; }
-      .project .content .text-holder .text-left .social a:hover {
-        text-decoration: none;
-        color: #000;
-        -webkit-transition: all 0.35s;
-        transition: all 0.35s; }
-        .project .content .text-holder .text-left .social a:hover span.ya-share2__badge {
-          -webkit-transition: all 0.35s;
-          transition: all 0.35s;
-          top: 0; }
-        .project .content .text-holder .text-left .social a:hover span.ya-share2__title {
-          top: -26px;
-          -webkit-transition: all 0.35s;
-          transition: all 0.35s;
-          opacity: 0; }
+      text-align: left;
+      /*&:hover
+              text-decoration: none
+              color: #000
+              transition: all 0.35s
+              span.ya-share2__badge
+                transition: all 0.35s
+                top: 0
+              span.ya-share2__title
+                top: -26px
+                transition: all 0.35s
+                opacity: 0 */ }
       .project .content .text-holder .text-left .social a span.ya-share2__badge {
         position: absolute;
         top: -26px;
         left: 0;
         -webkit-transition: all 0.35s;
-        transition: all 0.35s; }
+        transition: all 0.35s;
+        opacity: 0; }
       .project .content .text-holder .text-left .social a span.ya-share2__title {
         position: absolute;
         top: 0;
