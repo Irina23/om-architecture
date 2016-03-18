@@ -76,7 +76,8 @@ img
   width: 100%
   height: 100%
   overflow: visible
-  background: #fff url('../img/content/logo.png') no-repeat center center
+  background: #fff url('../img/icons/logo.svg') no-repeat center center
+  background-size: 10%
   animation-fill-mode: both
 
 
@@ -123,10 +124,14 @@ img
   .logo
       position: absolute
       left: 50%
-      width: 39px
-      height: 27px
-      margin-left: -20px
-      top: 11px
+      //width: 39px
+      //height: 27px
+      //margin-left: -20px
+      //top: 11px
+      width: 60px
+      height: 48px
+      top: 4px
+      margin-left: -30px
       a
         display: block
 
@@ -211,8 +216,8 @@ img
         top: inherit
         right: inherit
       .logo
-        width: 43px
-        height: 27px
+        width: 60px
+        height: 48px
         position: relative
         left: inherit
         margin: auto
@@ -232,6 +237,7 @@ img
   overflow: hidden
   z-index: 0
   box-sizing: border-box
+  transform: translateZ(0)!important
 
   .bx-wrapper
     //pointer-events: none
@@ -240,12 +246,12 @@ img
 
   .logo
     position: absolute
-    top: 50%
+    bottom: 100px
     left: 50%
-    width: 60px
-    height: 48px
-    margin-left: -30px
-    margin-top: -30px
+    width: 120px
+    height: 96px
+    margin-left: -60px
+
     z-index: 100
 
 
@@ -531,7 +537,7 @@ img
         color: #010101
         line-height: 1em
         margin-bottom: 30px
-        font-size: 1.5em
+        font-size: 1.15em
         font-weight: 700
 
     .social
@@ -539,10 +545,11 @@ img
       float: right
       .title-social
         //font-size: 20px
-        font-size: 1.5em
+        font-size: 1.15em
         color: #010101
         line-height: 1em
         margin-bottom: 30px
+        font-weight: 700
 
       a
         height: 26px
@@ -574,7 +581,7 @@ img
           right: 0
           display: block!important
           //font-size: 20px
-          font-size: 1.5em
+          font-size: 1.25em
           line-height: 1.3em
           font-weight: 400
           //font-family: 'DINPro-Regular', Arial, sans-serif
@@ -927,7 +934,10 @@ img
         display: none
     .logo
       z-index: 3
-      top: 7px
+      top: 4px
+      width: 50px
+      height: 38px
+
     #menu
       display: none
     .lang
