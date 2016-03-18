@@ -500,6 +500,12 @@ img {
   #footer .content .social {
     float: right;
     margin-top: 13px; }
+    #footer .content .social a {
+      margin-right: 20px; }
+    #footer .content .social a, #footer .content .social ul {
+      display: inline-block;
+      vertical-align: middle;
+      float: none; }
     #footer .content .social li {
       display: inline-block;
       vertical-align: middle;
@@ -857,3 +863,6 @@ img {
         z-index: 15; }
       .project .content .modal-holder .modal-content {
         padding-top: 42px; } }
+
+#blueimp-gallery .indicator li {
+  cursor: pointer; }
