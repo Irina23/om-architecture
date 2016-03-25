@@ -436,13 +436,13 @@ img {
       margin-bottom: 30px;
       font-weight: 700; }
     #blog .item-article .social a {
+      display: block;
       height: 26px;
       width: 120px;
       overflow: hidden;
       position: relative;
       -webkit-transition: all 0.35s;
       transition: all 0.35s;
-      margin-bottom: 10px;
       /*&:hover
           text-decoration: none
           color: #000
@@ -513,13 +513,12 @@ img {
     left: 50%;
     width: 60px;
     height: 48px;
-    top: 10px;
+    top: 5px;
     margin-left: -30px; }
     #footer .content .logo a {
       display: block; }
   #footer .content .social {
-    float: right;
-    margin-top: 13px; }
+    float: right; }
     #footer .content .social a {
       margin-right: 20px; }
     #footer .content .social a, #footer .content .social ul {
@@ -616,14 +615,17 @@ img {
     .project .content .text-holder .text-left .social .ya-share2__item {
       display: block !important; }
     .project .content .text-holder .text-left .social a {
+      display: block;
       height: 26px;
       width: 120px;
       overflow: hidden;
       position: relative;
       -webkit-transition: all 0.35s;
       transition: all 0.35s;
-      margin-bottom: 10px;
       text-align: left;
+      font-size: 1.25em;
+      line-height: 1.3em;
+      font-weight: 400;
       /*&:hover
               text-decoration: none
               color: #000

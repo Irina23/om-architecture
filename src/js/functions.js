@@ -150,6 +150,22 @@ jQuery(document).ready(function() {
     });
 
 
+    jQuery(document).on('scroll', function () {
+        //location.hash = $self.attr('href')
+    });
+    $(window).on('activate.bs.scrollspy', function(e) {
+        var $hash, $node;
+        $hash = $("a[href^='#']", e.target).attr("href").replace(/^#/, '');
+        $node = $('#' + $hash);
+        if ($node.length) {
+            $node.attr('id', '');
+        }
+        document.location.hash = $hash;
+        if ($node.length) {
+            return $node.attr('id', $hash);
+        }
+    });
+
 
 
 
@@ -183,6 +199,11 @@ jQuery(document).ready(function() {
 
 
 
+
+
+
+
+
 });
 
 
@@ -199,9 +220,8 @@ window.onload = function(){
     });
 
 
+
 };
-
-
 
 
 
