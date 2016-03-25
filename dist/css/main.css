@@ -503,7 +503,7 @@ img {
       font-weight: 700;
       text-align: center;
       line-height: 1.5em; }
-      #footer .mobile_contacts .info-contacts p:nth-child(2), #footer .mobile_contacts .info-contacts a:nth-child(2) {
+      #footer .mobile_contacts .info-contacts p.email, #footer .mobile_contacts .info-contacts a.email {
         margin-bottom: 25px; }
 
 #footer .content {
@@ -824,7 +824,8 @@ img {
         #blog .content .item-article .info-holder .social li {
           display: block !important; }
         #blog .content .item-article .info-holder .social a {
-          margin-bottom: 0; }
+          margin-bottom: 0;
+          width: auto; }
           #blog .content .item-article .info-holder .social a span.ya-share2__title {
             font-size: 1em; }
         #blog .content .item-article .info-holder > div {
