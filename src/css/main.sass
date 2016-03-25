@@ -369,6 +369,8 @@ img
   .info-contacts
     height: 70px
     overflow: hidden
+    &.more-email
+      height: 130px
   .content
     padding: 52px 45px 30px
     p
@@ -388,8 +390,21 @@ img
     height: calc(100vh - 182px)
     width: 100%
     margin-bottom: 30px
+    &.more-email
+      height: calc(100vh - 242px)
   .info-left
     float: left
+
+    //>div
+      display: inline-block
+      vertical-align: top
+      margin-right: 20px
+      height: 60px
+      overflow: hidden
+      &:first-child
+        height: auto
+      &:last-child
+        margin-right: 0
   .info-right
     float: right
     >div
