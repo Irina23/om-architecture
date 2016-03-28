@@ -105,6 +105,7 @@ img
   left: 0
   width: 100%
   z-index: 11
+  transform: translateZ(12px)
 
   .content
     position: relative
@@ -138,7 +139,8 @@ img
         display: block
 
   #menu
-    padding: 17px 110px
+    //padding: 17px 110px
+    padding: 17px 0
     li
       display: inline-block
       vertical-align: middle
@@ -153,7 +155,7 @@ img
 
       &:nth-child(5),
       &:nth-child(4)
-        float: right
+        //float: right
 
       &:first-child
         display: none
@@ -967,12 +969,13 @@ img
         display: table
         width: 100%
       li
-        margin: auto
-        display: table-cell
-        text-align: center
+        margin: 0 7px
+        //display: table-cell
+        //text-align: center
         font-size: 14px
         &:first-child
-          margin: auto
+
+          margin-left: 0
           text-align: left
         &:last-child
           //text-align: right
@@ -1159,3 +1162,6 @@ img
 
 #blueimp-gallery .indicator li
   cursor: pointer
+
+.blueimp-gallery
+  transform: translateZ(14px)
