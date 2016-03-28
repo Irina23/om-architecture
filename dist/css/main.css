@@ -623,7 +623,7 @@ img {
         margin-bottom: 30px; }
     .project .content .text-holder .text-left .info-project span, .project .content .text-holder .text-left .info-project p {
       display: block;
-      font-size: 20em;
+      font-size: 20px;
       line-height: 1.3em; }
       .project .content .text-holder .text-left .info-project span.title, .project .content .text-holder .text-left .info-project p.title {
         font-family: "DINPro-Bold", sans-serif; }
