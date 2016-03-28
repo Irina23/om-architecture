@@ -1,9 +1,9 @@
 //$main-color: #1c1c1c
 
 @font-face
-  font-family: 'din-alternate-bold'
-  src: url('../fonts/din-alternate-bold.eot')
-  src: url('../fonts/din-alternate-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/din-alternate-bold.woff2') format('woff2'), url('../fonts/din-alternate-bold.woff') format('woff'), url('../fonts/din-alternate-bold.ttf') format('truetype'), url('../fonts/din-alternate-bold.svg') format('svg')
+  font-family: 'DINAlternate-Bold'
+  src: url('../fonts/DINAlternate-Bold.eot')
+  src: url('../fonts/DINAlternate-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/DINAlternate-Bold.woff') format('woff'), url('../fonts/DINAlternate-Bold.ttf') format('truetype'), url('../fonts/DINAlternate-Bold.svg') format('svg')
   font-weight: normal
   font-style: normal
 
@@ -29,8 +29,8 @@
 
 
 body
-  font: 400 100%/1.375 'Roboto', sans-serif
-  font-size: 1em
+  font-family: 'DINPro-Regular', sans-serif
+  font-size: 14px
   //font-family: 'Roboto', sans-serif
   padding: 0
   margin: 0
@@ -39,8 +39,9 @@ body
   color: #000
   //font-weight: 700
   a
-    font: 400 100%/1.375 'Roboto', sans-serif
+    //font: 400 100%/1.375 'Roboto', sans-serif
     //font-family: 'Roboto', sans-serif
+    font-family: 'DINPro-Regular', sans-serif
     line-height: 1em
     //font-size: 14px
     color: #000
@@ -118,10 +119,10 @@ img
       &.active
         text-decoration: underline
       a
-        //font-size: 16px
+        font-family: "DINAlternate-Bold", sans-serif
+
         line-height: 1em
-        //font-family: Arial, sans-serif
-        //font-weight: 400
+        font-size: 19px
   .logo
       position: absolute
       left: 50%
@@ -147,6 +148,8 @@ img
         //font-size: 16px
         line-height: 1em
         font-weight: 600
+        font-family: "DINAlternate-Bold", sans-serif
+        font-size: 18px
 
       &:nth-child(5),
       &:nth-child(4)
@@ -172,6 +175,7 @@ img
       //z-index: 101
       background: #000
       width: 100%
+      min-height: 100vh
 
 
     .navbar-toggle
@@ -212,10 +216,14 @@ img
           a
             color: #fff
             text-transform: uppercase
+            font-size: 12px
+
       .lang
         position: relative
         top: inherit
         right: inherit
+        >div a
+          font-size: 12px
       .logo
         width: 60px
         height: 48px
@@ -227,7 +235,7 @@ img
 
 
 #slider
-  padding: 50px 45px
+  padding: 50px 45px 50px
   //padding-bottom: 50px
   //padding-top: 50px
   left: 0
@@ -290,8 +298,8 @@ img
       cursor: pointer
       margin-right: 50px
       text-transform: uppercase
-      //font-size: 14px
-      font-weight: 700
+      font-size: 18px
+      font-family: "DINAlternate-Bold", sans-serif
       line-height: 1em
       text-decoration: underline
       color: #afafb0
@@ -319,15 +327,16 @@ img
       color: #000
       line-height: 1.5em
       .category
-        //font-size: 16px
+        font-size: 20px
         margin-bottom: 5px
         //font-family: 'din-alternate-bold', Arial, sans-serif
-        font-weight: 700
         padding-top: 15px
+        font-family: 'DINPro-Regular', sans-serif
 
       .title
-        //font-size: 20px
+        font-size: 20px
         padding-bottom: 20px
+        font-family: "DINPro-Bold", sans-serif
 
 
     a
@@ -343,7 +352,7 @@ img
   .content
     padding: 52px 90px
     p
-      //font-size: 16px
+      font-size: 20px
       color: #6c6c6c
       line-height: 1.3em
       text-align: justify
@@ -367,31 +376,34 @@ img
   background: #f7f7f7
   height: 100vh
   .info-contacts
-    height: 70px
+    height: 88px
     overflow: hidden
     &.more-email
-      height: 130px
+      height: 166px
   .content
     padding: 52px 45px 30px
     p
-      //font-size: 15px
+      font-size: 20px
       line-height: 1.3em
+      font-family: "DINAlternate-Bold", sans-serif
       //font-family: Arial, sans-serif
-      font-weight: 600
+      //font-weight: 600
     a
       display: block
-      //font-size: 15px
+      font-size: 20px
       line-height: 1.3em
+      font-family: "DINAlternate-Bold", sans-serif
       //font-family: Arial, sans-serif
-      font-weight: 600
+      //font-weight: 600
 
   #map
     //height: 690px
-    height: calc(100vh - 182px)
+    //height: calc(100vh - 182px)
+    height: calc(100vh - 190px)
     width: 100%
     margin-bottom: 30px
     &.more-email
-      height: calc(100vh - 242px)
+      height: calc(100vh - 268px)
   .info-left
     float: left
 
@@ -411,7 +423,7 @@ img
       display: inline-block
       vertical-align: top
       margin-right: 20px
-      height: 60px
+      height: 78px
       overflow: hidden
       &:last-child
         margin-right: 0
@@ -485,21 +497,19 @@ img
       color: #6c6c6c
 
       h3
-        //font-size: 20px
-        font-size: 1.5em
+        font-size: 20px
+        //font-size: 1.5em
         line-height: 1.3em
         margin-bottom: 40px
         text-align: justify
         color: #000
+        font-family: 'DINPro-Bold', sans-serif
 
       h2
         line-height: 1em
         margin-bottom: 40px
         font-size: 1.2em
-      h3
-          line-height: 1em
-          margin-bottom: 40px
-          font-size: 1.15em
+
       h4
           line-height: 1em
           margin-bottom: 40px
@@ -532,7 +542,7 @@ img
         font-weight: 700
         text-decoration: underline
       p
-        //font-size: 16px
+        font-size: 20px
         line-height: 1.3em
         color: #6c6c6c
         text-align: justify
@@ -562,19 +572,21 @@ img
       //width: 120px
       text-align: right
       .data
-        //font-size: 20px
+        font-size: 20px
         color: #010101
         line-height: 1em
         margin-bottom: 30px
-        font-size: 1.15em
+        //font-size: 1.15em
         font-weight: 700
+        font-family: "DINPro-Bold", sans-serif
 
     .social
       width: 120px
       float: right
       .title-social
-        //font-size: 20px
-        font-size: 1.15em
+        font-size: 20px
+        font-family: "DINPro-Bold", sans-serif
+        //font-size: 1.15em
         color: #010101
         line-height: 1em
         margin-bottom: 30px
@@ -582,7 +594,10 @@ img
 
       a
         display: block
-        height: 26px
+        //font-family: "DINPro-Bold", sans-serif
+        font-size: 20px
+        line-height: 1.3em
+        //height: 26px
         width: 120px
         overflow: hidden
         position: relative
@@ -648,6 +663,8 @@ img
         font-weight: 700
         text-align: center
         line-height: 1.5em
+        font-size: 15px
+        font-family: "DINPro-Bold", sans-serif
         &.email
           margin-bottom: 25px
   .content
@@ -656,9 +673,10 @@ img
     .copyright
       line-height: 50px
       float: left
-      //font-size: 16px
+      font-size: 16px
+      font-family: "DINAlternate-Bold", sans-serif
       //font-family:  Arial, sans-serif
-      font-weight: 700
+      //font-weight: 700
     .logo
       position: absolute
       left: 50%
@@ -775,11 +793,11 @@ img
               margin-bottom: 30px
           span,p
             display: block
-            font-size: 1.25em
+            font-size: 20em
             line-height: 1.3em
             &.title
 
-              font-weight: 700
+              font-family: "DINPro-Bold", sans-serif
 
 
 
@@ -787,25 +805,26 @@ img
           span
             display: inline-block!important
           .title-social
-              //font-size: 20px
-              font-size: 1.25em
+              font-size: 20px
+              //font-size: 1.25em
               color: #010101
               line-height: 1em
               margin-bottom: 30px
-              font-weight: 700
+              font-family: "DINPro-Bold", sans-serif
+              //font-weight: 700
 
           .ya-share2__item
             display: block!important
           a
             display: block
-            height: 26px
+            //height: 26px
             width: 120px
             overflow: hidden
             position: relative
             transition: all 0.35s
             //margin-bottom: 10px
             text-align: left
-            font-size: 1.25em
+            font-size: 20px
             line-height: 1.3em
             font-weight: 400
             /*&:hover
@@ -847,37 +866,24 @@ img
         width: 60%
         h1,h2,h3,h4,h5,h6
           color: #000
+          line-height: 1em
+          margin-bottom: 40px
+          font-size: 20px
+
         h1
           line-height: 1em
           margin-bottom: 40px
-          font-size: 1.25em
-        h2
-          line-height: 1em
-          margin-bottom: 40px
-          font-size: 1.2em
-        h3
-          line-height: 1em
-          margin-bottom: 40px
-          font-size: 1.15em
-        h4
-          line-height: 1em
-          margin-bottom: 40px
-          font-size: 1.1em
-        h5
-          line-height: 1em
-          margin-bottom: 40px
-          font-size: 1.05em
-        h6
-          line-height: 1em
-          margin-bottom: 40px
-          font-size: 1em
+          font-size: 24px
+
 
 
         .description
           color: #6c6c6c
           line-height: 1.3em
           text-align: justify
-          font-weight: 700
+          //font-weight: 700
+          font-size: 20px
+
           table
             tr
               background: rgba(0, 0, 0, 0.7)
@@ -944,8 +950,17 @@ img
     font-size: 0.8em
   #slider
     padding: 0
+    .logo
+      width: 68px
+      height: 48px
+      margin-left: -34px
+      bottom: 60px
   #projects
     padding: 43px 20px 30px
+    .item-project
+      .text-holder
+        .category,.title
+          font-size: 15px
     .project-nav
       margin: 0 auto 20px
       ul
@@ -955,7 +970,7 @@ img
         margin: auto
         display: table-cell
         text-align: center
-        font-size: 1em
+        font-size: 14px
         &:first-child
           margin: auto
           text-align: left
@@ -986,6 +1001,7 @@ img
       display: none
     .mobile-navbar
       display: block
+
       .logo
         display: block !important
       #menu-mobile, .lang
@@ -1007,6 +1023,8 @@ img
     background: #ebebeb
     .content
       padding: 43px 20px 70px
+      p
+        font-size: 15px
       .img-holder
         margin-bottom: 20px
 
@@ -1025,15 +1043,18 @@ img
           display: block
           width: 100%
           margin-bottom: 20px
+          p
+            font-size: 15px
           h3
             margin-bottom: 25px
-            font-size: 1em
+            font-size: 15px
         .info-holder
           float: none
           width: 100%
           .data
-            font-size: 1em
+            font-size: 15px
             text-align: left
+            float: left
           .social
             .title-social
               font-size: 1em
@@ -1044,6 +1065,7 @@ img
             a
                 margin-bottom: 0
                 width: auto
+                font-size: 15px
                 span.ya-share2__title
                   font-size: 1em
 
@@ -1080,6 +1102,8 @@ img
       padding: 0
       .text-holder
         padding: 0 0 40px
+        .text-left .social a
+          font-size: 15px
         .text-left,.text-right
           float: none
           width: 100%
@@ -1087,29 +1111,31 @@ img
           margin-bottom: 30px
           .info-project
             span,p
-              font-size: 1em
+              font-size: 15px
             .team
               margin-bottom: 30px
               margin-top: 30px
               span,p
-                font-size: 1em
+                font-size: 15px
               .title
                 margin-bottom: 0
           .social
             //display: none
             .title-social
               margin-bottom: 10px
-              font-size: 1em
+              font-size: 15px
             a
               margin-bottom: 0
               span.ya-share2__title
-                font-size: 1em
+                font-size: 15px
         .text-right
           h1
             text-align: center
+            font-size: 15px
             margin-bottom: 30px
           .description
-            font-weight: 400
+            font-size: 15px
+
 
       .container
         position: relative
