@@ -591,16 +591,18 @@ img {
       background: #000 !important; }
 
 .project .content .modal-holder {
-  padding: 100px 0 0;
+  padding: 0;
   position: relative; }
-  .project .content .modal-holder .close-modal {
+  .project .content  .close-modal {
     width: 31px;
     height: 30px;
     background: url("../img/icons/close.png") no-repeat center;
     position: absolute;
     top: 60px;
-    right: 10px;
-    cursor: pointer; }
+    right: 55px;
+    cursor: pointer;
+    z-index: 15;
+  }
 
 .project .content .img-holder {
   text-align: center;
@@ -908,14 +910,16 @@ img {
       margin-bottom: 15px; }
     .project .content .modal-holder {
       padding: 0 20px; }
-      .project .content .modal-holder .close-modal {
+      .project .content  .close-modal {
         width: 20px;
         height: 20px;
         background-size: contain;
-        top: 10px;
-        z-index: 15; }
-      .project .content .modal-holder .modal-content {
-        padding-top: 42px; }
+        right: 20px;
+        z-index: 15;
+        top: 15px;
+      }
+     /* .project .content .modal-holder .modal-content {
+        padding-top: 42px; }*/
     .item-project .img-holder{
       max-height: 300px;
       max-width: 100%;
@@ -1019,4 +1023,19 @@ body.client-safari #contacts #map{
 
 .project .img-holder .img{
   left: -1px;
+}
+
+
+
+.project .img-div.first-img .img-holder{
+  height: calc( 100vh - 100px )!important;
+  bottom: 0;
+  top: inherit !important;
+}
+@media screen and (max-width: 959px) {
+  .project .img-div.first-img .img-holder{
+    height: calc( 100vh - 40px ) !important;
+
+  }
+
 }
