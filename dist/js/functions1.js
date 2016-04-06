@@ -151,7 +151,7 @@ jQuery(document).ready(function() {
     });
 
 
-    jQuery(document).on('scroll', function () {
+    /*jQuery(document).on('scroll', function () {
         //location.hash = $self.attr('href')
     });
     $(window).on('activate.bs.scrollspy', function(e) {
@@ -165,7 +165,7 @@ jQuery(document).ready(function() {
         if ($node.length) {
             return $node.attr('id', $hash);
         }
-    });
+    });*/
 
 
 
