@@ -4,9 +4,14 @@ jQuery(document).ready(function() {
 
     jQuery(function() {
         jQuery("img.lazy").lazyload();
+
     });
 
     jQuery(window).load(function() {
+
+
+
+
         jQuery('#preloader').fadeOut('slow',function(){
             if (location.hash) {
                 //console.log(location.hash)
@@ -78,6 +83,9 @@ jQuery(document).ready(function() {
 
 
 
+
+
+
     /*var posts = jQuery('.item-project');
 
     jQuery(".project-nav li" ).click(  function() {
@@ -110,7 +118,7 @@ jQuery(document).ready(function() {
 
     jQuery(".project-nav li").click(function(){
         var nav_active = jQuery(this);
-        console.log(nav_active);
+        //console.log(nav_active);
         jQuery('.project-nav li').each(function(){
             jQuery(this).removeClass("active");
         });
@@ -118,7 +126,7 @@ jQuery(document).ready(function() {
 
 
         var customType = jQuery(this).attr('data-cat');
-        console.log(customType);
+        //console.log(customType);
         if(customType==="all") {
             jQuery('.item-project').css("opacity", 1);
             return;
@@ -150,7 +158,7 @@ jQuery(document).ready(function() {
 
     });
 
-
+/*
     jQuery(document).on('scroll', function () {
         //location.hash = $self.attr('href')
     });
@@ -166,7 +174,7 @@ jQuery(document).ready(function() {
             return $node.attr('id', $hash);
         }
     });
-
+*/
 
 
 
@@ -193,7 +201,7 @@ jQuery(document).ready(function() {
         jQuery('body').animate({
                 'opacity': 0
             }, 600, function () {
-                document.location.href = "index.html";
+                document.location.href = "/";
         });
 
     });

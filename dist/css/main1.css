@@ -96,7 +96,7 @@ img {
       #header .lang > div.active {
         text-decoration: underline; }
       #header .lang > div a {
-        font-family: "DINAlternate-Bold", sans-serif;
+        font-family: "DINPro-Regular", sans-serif;
         line-height: 1em;
         font-size: 19px; }
   #header .logo {
@@ -117,9 +117,10 @@ img {
       #header #menu li a {
         text-transform: uppercase;
         line-height: 1em;
-        font-weight: 600;
-        font-family: "DINAlternate-Bold", sans-serif;
-        font-size: 16px; }
+        /*font-weight: 600;
+        font-family: "DINAlternate-Bold", sans-serif;*/
+        font-family: "DINPro-Regular" ,sans-serif;
+        font-size: 17px; }
       #header #menu li:first-child {
         display: none; }
       #header #menu li.active a {
@@ -236,8 +237,8 @@ img {
       cursor: pointer;
       margin-right: 50px;
       text-transform: uppercase;
-      font-size: 16px;
-      font-family: "DINAlternate-Bold", sans-serif;
+      font-size: 17px;
+      font-family: "DINPro-Regular", sans-serif;
       line-height: 1em;
       text-decoration: underline;
       color: #afafb0;
@@ -299,14 +300,16 @@ img {
   #contacts .content {
     padding: 52px 45px 30px; }
     #contacts .content p {
-      font-size: 16px;
+      font-size: 17px;
       line-height: 1.3em;
       font-family: "DINAlternate-Bold", sans-serif; }
     #contacts .content a {
       display: block;
-      font-size: 16px;
+      font-size: 17px;
       line-height: 1.3em;
-      font-family: "DINAlternate-Bold", sans-serif; }
+      font-family: "DINAlternate-Bold", sans-serif;
+      letter-spacing: 0.6px;
+    }
   #contacts #map {
     height: calc(100vh - 190px);
     width: 100%;
@@ -519,8 +522,11 @@ img {
   #footer .content .copyright {
     line-height: 50px;
     float: left;
-    font-size: 16px;
-    font-family: "DINAlternate-Bold", sans-serif; }
+    font-size: 18px;
+    font-family: "DINAlternate-Bold", sans-serif;
+    margin-right: 20px;
+
+  }
   #footer .content .logo {
     position: absolute;
     left: 50%;
@@ -532,8 +538,8 @@ img {
       display: block; }
   #footer .content .social {
     float: right; }
-    #footer .content .social a {
-      margin-right: 20px; }
+    /*#footer .content .social a {
+      margin-right: 20px; }*/
     #footer .content .social a, #footer .content .social ul {
       display: inline-block;
       vertical-align: middle;
@@ -541,10 +547,12 @@ img {
     #footer .content .social li {
       display: inline-block;
       vertical-align: middle;
-      margin-right: 25px; }
+      margin-right: 10px; }
       #footer .content .social li a {
         background: url("../img/icons/social.png") no-repeat top left;
-        display: block; }
+        display: block;
+        padding: 0 5px;
+      }
       #footer .content .social li.facebook a {
         width: 14px;
         height: 23px; }
@@ -583,7 +591,7 @@ img {
       background: #000 !important; }
 
 .project .content .modal-holder {
-  padding: 100px 45px 0;
+  padding: 100px 0 0;
   position: relative; }
   .project .content .modal-holder .close-modal {
     width: 31px;
@@ -597,9 +605,11 @@ img {
 .project .content .img-holder {
   text-align: center;
   width: 100%;
-  margin-bottom: 40px; }
+  /*padding-bottom: 40px;*/ }
   .project .content .img-holder img {
-    width: 100%; }
+    width: 100%;
+
+ }
 
 .project .content .text-holder {
   padding: 50px; }
@@ -844,7 +854,13 @@ img {
     #footer .content .copyright {
       display: block;
       float: none;
-      text-align: center; }
+      text-align: center;
+      line-height: 30px;
+      font-family: "DINPro-Bold", sans-serif;
+      font-size: 14px;
+
+
+    }
     #footer .content .logo {
       display: none; }
     #footer .content .social {
@@ -854,14 +870,16 @@ img {
   .project .content {
     padding: 0; }
     .project .content .text-holder {
-      padding: 0 0 40px; }
+      padding: 0; }
       .project .content .text-holder .text-left .social a {
         font-size: 14px; }
       .project .content .text-holder .text-left, .project .content .text-holder .text-right {
         float: none;
         width: 100%; }
       .project .content .text-holder .text-left {
-        margin-bottom: 30px; }
+        margin-bottom: 30px;
+        padding-top: 43px;
+       }
         .project .content .text-holder .text-left .info-project span, .project .content .text-holder .text-left .info-project p {
           font-size: 14px; }
         .project .content .text-holder .text-left .info-project .team {
@@ -906,6 +924,10 @@ img {
   .item-project .img-holder img{
     width: 100%;
   }
+
+  .project .content .img-div {
+    margin-bottom: 15px;
+  }
 }
 
 #blueimp-gallery .indicator li {
@@ -922,6 +944,79 @@ body.client-safari #contacts #map{
 }
 
 
+.item-project .img-holder{
+  position: relative;
+}
+.item-project .img-holder img{
+  display: block;
+  width: 100%;
+
+}
+.project .img-holder img{
+  display: block;
+  opacity: 0;
+  width: 100%;
+  left: 0;
+  z-index: 13;
+  position: absolute;
+  height: 100%;
+
+}
+
+
+.project .img-holder .img{
+  background-size: cover;
+  background-position: top center;
+  position: absolute;
+  top: 52px;
+  left: 0;
+  height: calc( 100vh - 52px);
+  width: 100%;
+  /*padding-top: 52px;*/
+
+
+}
+@media screen and (max-width: 959px) {
+  .project .img-holder .img{
+
+    top: 43px;
+
+    height: calc( 100vh - 43px);
 
 
 
+
+  }
+}
+
+.project .img-holder{
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.project .img-div{
+
+  display: block;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  /*padding-top: 52px;
+  box-sizing: border-box;*/
+
+
+}
+#header .lang{
+  right: 45px;
+}
+#header .lang > div:last-child{
+  margin-right: 0;
+}
+
+
+.project .img-holder .img{
+  left: -1px;
+}

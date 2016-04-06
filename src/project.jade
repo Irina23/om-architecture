@@ -19,12 +19,16 @@ html(lang="ru")
         link(href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css")
         link(href="css/blueimp-gallery.css" rel="stylesheet" type="text/css")
         script(src="bower_components/jquery/dist/jquery.js")
-        script(src="js/functions.js")
+        script(src="js/functions1.js")
         script(src="bower_components/jquery_lazyload/jquery.lazyload.js")
         script(src="js/blueimp-gallery.min.js")
         script(src="js/jquery.bxslider.js")
         script(src="js/masonry.pkgd.min.js")
         script(src="js/scrollspy.js")
+        link(href='bower_components/fullpage/dist/jquery.fullpage.css', rel='stylesheet', type='text/css')
+        script(src='bower_components/fullpage/vendors/jquery.slimscroll.min.js')
+        script(src='bower_components/fullpage/dist/jquery.fullpage.js')
+
         script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?v=3')
         meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
         meta(name='format-detection', content='telephone=no')
@@ -98,16 +102,18 @@ html(lang="ru")
 
             .container
                 .content
-                    .modal-holder
+                    .modal-holder#fullpage
 
 
                         .close-modal
 
                         .modal-content
 
-                            .img-holder
-                                img.lazy(data-original="img/content/project_img0.jpg")
-                            .text-holder.cf
+                            .img-div.section
+                                .img-holder
+                                    img.lazy.fake-img(data-original="img/content/project_img0.jpg")
+                                    div.img(style="background-image: url(img/content/project_img0.jpg)")
+                            .text-holder.cf.section
                                 .text-left
                                     .info-project
                                         span.title Год: 2015
@@ -143,27 +149,46 @@ html(lang="ru")
                                             душевые трапы, освещение, двери и тд..)
 
 
-
-                            .img-holder
-                                img.lazy(data-original="img/content/project_img1.jpg")
-                            .img-holder
-                                img.lazy(data-original="img/content/project_img2.jpg")
-                            .img-holder
-                                img.lazy(data-original="img/content/project_img3.jpg")
-                            .img-holder
-                                img.lazy(data-original="img/content/project_img4.jpg")
-                            .img-holder
-                                img.lazy(data-original="img/content/project_img5.jpg")
-                            .img-holder
-                                img.lazy(data-original="img/content/project_img6.jpg")
-                            .img-holder
-                                img.lazy(data-original="img/content/project_img7.jpg")
-                            .img-holder
-                                img.lazy(data-original="img/content/project_img8.jpg")
-                            .img-holder
-                                img.lazy(data-original="img/content/project_img9.jpg")
-                            .img-holder
-                                img.lazy(data-original="img/content/project_img10.jpg")
+                            .img-div.section
+                                .img-holder
+                                    img.lazy(data-original="img/content/project_img1.jpg")
+                                    div.img(style="background-image: url(img/content/project_img1.jpg)")
+                            .img-div.section
+                                .img-holder
+                                    img.lazy(data-original="img/content/project_img2.jpg")
+                                    div.img(style="background-image: url(img/content/project_img2.jpg)")
+                            .img-div.section
+                                .img-holder
+                                    img.lazy(data-original="img/content/project_img3.jpg")
+                                    div.img(style="background-image: url(img/content/project_img3.jpg)")
+                            .img-div.section
+                                .img-holder
+                                    img.lazy(data-original="img/content/project_img4.jpg")
+                                    div.img(style="background-image: url(img/content/project_img4.jpg)")
+                            .img-div.section
+                                .img-holder
+                                    img.lazy(data-original="img/content/project_img5.jpg")
+                                    div.img(style="background-image: url(img/content/project_img5.jpg)")
+                            .img-div.section
+                                .img-holder
+                                    img.lazy(data-original="img/content/project_img6.jpg")
+                                    div.img(style="background-image: url(img/content/project_img6.jpg)")
+                            .img-div.section
+                                .img-holder
+                                    img.lazy(data-original="img/content/project_img7.jpg")
+                                    div.img(style="background-image: url(img/content/project_img7.jpg)")
+                            .img-div.section
+                                .img-holder
+                                    img.lazy(data-original="img/content/project_img8.jpg")
+                                    div.img(style="background-image: url(img/content/project_img8.jpg)")
+                            .img-div.section
+                                .img-holder
+                                    img.lazy(data-original="img/content/project_img9.jpg")
+                                    div.img(style="background-image: url(img/content/project_img9.jpg)")
+                            .img-div.section
+                                .img-holder
+                                    img.lazy(data-original="img/content/project_img10.jpg")
+                                    div.img(style="background-image: url(img/content/project_img10.jpg)")
 
 
 
