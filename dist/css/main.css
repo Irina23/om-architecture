@@ -204,10 +204,10 @@ img {
     height: 100% !important; }
   #slider .logo {
     position: absolute;
-    bottom: 100px;
+    bottom: 150px;
     left: 50%;
     width: 120px;
-    height: 96px;
+    height: 120px;
     margin-left: -60px;
     z-index: 100; }
   #slider .slider {
@@ -745,7 +745,7 @@ img {
     padding: 0; }
     #slider .logo {
       width: 68px;
-      height: 48px;
+      height: 68px;
       margin-left: -34px;
       bottom: 60px; }
   #projects {
