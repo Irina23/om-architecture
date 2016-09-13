@@ -255,10 +255,23 @@ img {
     width: 33.3%;
     box-sizing: border-box;
     padding: 0 10px;
-    float: left;
+    /*float: left;
     -webkit-transition: all 0.35s;
-    transition: all 0.35s; }
-    #projects .item-project .text-holder {
+    transition: all 0.35s;*/ }
+
+  #projects .item-project a{
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+    opacity: 1;
+  }
+#projects .item-project a.noshow{
+  opacity: 0.5;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+
+#projects .item-project .text-holder {
       color: #000;
       line-height: 1.5em; }
       #projects .item-project .text-holder .category {

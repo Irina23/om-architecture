@@ -1,4 +1,13 @@
+
 jQuery(document).ready(function() {
+
+
+    var $container = $('.project-list');
+    var $portfolioItems = $container.children();
+
+    // $portfolioItems.css({
+    //     'transition': 'none !important'
+    // });
 
 
 
@@ -15,13 +24,17 @@ jQuery(document).ready(function() {
             }
             jQuery(this).remove();
         });
+
         //gutter_in_pixels = jQuery(".item-project").width() * 0.02;
-        jQuery('.project-list').masonry({
-            // options
+
+        $container.masonry({
             itemSelector: '.item-project',
             resizeable: true
-            //gutter: gutter_in_pixels
+
         });
+
+
+
         jQuery('.slider').bxSlider({
                auto: true,
                speed: 1000
@@ -108,31 +121,46 @@ jQuery(document).ready(function() {
 
     });*/
 
+    // portfolioItems
     jQuery(".project-nav li").click(function(){
         var nav_active = jQuery(this);
-        console.log(nav_active);
+        //console.log(nav_active);
         jQuery('.project-nav li').each(function(){
             jQuery(this).removeClass("active");
         });
         jQuery(nav_active).addClass("active");
-
-
         var customType = jQuery(this).attr('data-cat');
-        console.log(customType);
+
         if(customType==="all") {
-            jQuery('.item-project').css("opacity", 1);
+            jQuery('.item-project').find('a').removeClass('noshow');
             return;
-        }else{
-            jQuery('.item-project').each(function(){
-                if(jQuery(this).attr('data-cat').indexOf(customType) < 0) jQuery(this).css("opacity", 0.5); else jQuery(this).css("opacity", 1);
+        }
+        if(customType==='predmetnyy-dizayn'){
+            jQuery('.item-project').each(function() {
+                if (jQuery(this).attr('data-cat').indexOf(customType) < 0) {
+                    jQuery(this).detach();
+                }
+                else jQuery(this).find('a').removeClass('noshow');
+            });
+        } else{
+
+            $portfolioItems.each(function(){
+
+                $(this).appendTo($container);
+                if($(this).attr('data-cat').indexOf(customType) < 0) $(this).find('a').addClass('noshow');
+                else $(this).find('a').removeClass('noshow');
+
             });
         }
 
+        $container
+            .trigger('resize')
+            .masonry( 'reloadItems' )
+            .masonry( 'layout');
+     
 
     });
-    jQuery(window).resize(function() {
 
-    });
 
 
 
