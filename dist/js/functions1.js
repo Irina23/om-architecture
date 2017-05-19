@@ -5,6 +5,8 @@ jQuery(document).ready(function() {
     var $container = $('.project-list');
     var $portfolioItems = $container.children();
 
+
+
     // $portfolioItems.css({
     //     'transition': 'none !important'
     // });
@@ -16,6 +18,17 @@ jQuery(document).ready(function() {
     });
 
     jQuery(window).load(function() {
+
+
+        setTimeout(function(){
+            $container.masonry({
+                itemSelector: '.item-project',
+                percentPosition: true
+
+            });
+            //alert('11100');
+        }, 200);
+
         jQuery('#preloader').fadeOut('slow',function(){
             if (location.hash) {
                 //console.log(location.hash)
@@ -25,13 +38,10 @@ jQuery(document).ready(function() {
             jQuery(this).remove();
         });
 
+
         //gutter_in_pixels = jQuery(".item-project").width() * 0.02;
 
-        $container.masonry({
-            itemSelector: '.item-project',
-            resizeable: true
 
-        });
 
 
 
@@ -73,6 +83,99 @@ jQuery(document).ready(function() {
 
         $(window).trigger('resize');
 
+
+
+
+        // portfolioItems
+        jQuery(".project-nav li").click(function(){
+            var nav_active = jQuery(this);
+            location.hash = $(nav_active).attr('href');
+
+            //console.log(nav_active);
+            jQuery('.project-nav li').each(function(){
+                jQuery(this).removeClass("active");
+            });
+            jQuery(nav_active).addClass("active");
+            var customType = jQuery(this).attr('data-cat');
+            $(nav_active).closest('.content').attr('id', customType);
+
+            if(customType==="all") {
+                jQuery('.item-project').find('a').removeClass('noshow');
+                return;
+            }
+            if(customType==='predmetnyy-dizayn'){
+                $('.item-project').each(function() {
+                    if (jQuery(this).attr('data-cat').indexOf(customType) < 0) {
+                        jQuery(this).detach();
+                    }
+                    else jQuery(this).find('a').removeClass('noshow');
+                });
+            } else{
+
+                $portfolioItems.each(function(){
+
+                    $(this).appendTo($container);
+                    if($(this).attr('data-cat').indexOf(customType) < 0) $(this).find('a').addClass('noshow');
+                    else $(this).find('a').removeClass('noshow');
+
+                });
+            }
+
+            $container
+                .trigger('resize')
+                .masonry( 'reloadItems' )
+                .masonry( 'layout');
+
+
+
+        });
+
+
+        if (window.location.hash) {
+            var hash = window.location.hash.replace('#','');
+            var hashType = 'all';
+            //console.log(hash);
+
+            jQuery('.project-nav li').each(function(){
+                jQuery(this).removeClass("active");
+                if(hash===jQuery(this).attr('data-cat')) {
+                    hashType = jQuery(this).attr('data-cat');
+                }
+            });
+            jQuery('.project-nav li[data-cat='+hash+']')
+                .addClass("active")
+                .closest('.content').attr('id', hash);
+            if(hashType==="all") {
+                $('.item-project').find('a').removeClass('noshow');
+                return;
+            }
+            if(hashType==='predmetnyy-dizayn'){
+                $('.item-project').each(function() {
+                    if (jQuery(this).attr('data-cat').indexOf(hashType) < 0) {
+                        jQuery(this).detach();
+                    }
+                    else jQuery(this).find('a').removeClass('noshow');
+                });
+
+            } else{
+
+                $portfolioItems.each(function(){
+                    //$(this).appendTo($container);
+                    if($(this).attr('data-cat').indexOf(hashType) < 0) $(this).find('a').addClass('noshow');
+                    else $(this).find('a').removeClass('noshow');
+
+
+                });
+            }
+            /*$container
+                .trigger('resize')
+                .masonry( 'reloadItems' )
+                .masonry( 'layout');*/
+
+
+
+
+        }
     });
 
     jQuery(".mobile-navbar a").on("click", function(){
@@ -121,45 +224,7 @@ jQuery(document).ready(function() {
 
     });*/
 
-    // portfolioItems
-    jQuery(".project-nav li").click(function(){
-        var nav_active = jQuery(this);
-        //console.log(nav_active);
-        jQuery('.project-nav li').each(function(){
-            jQuery(this).removeClass("active");
-        });
-        jQuery(nav_active).addClass("active");
-        var customType = jQuery(this).attr('data-cat');
 
-        if(customType==="all") {
-            jQuery('.item-project').find('a').removeClass('noshow');
-            return;
-        }
-        if(customType==='predmetnyy-dizayn'){
-            jQuery('.item-project').each(function() {
-                if (jQuery(this).attr('data-cat').indexOf(customType) < 0) {
-                    jQuery(this).detach();
-                }
-                else jQuery(this).find('a').removeClass('noshow');
-            });
-        } else{
-
-            $portfolioItems.each(function(){
-
-                $(this).appendTo($container);
-                if($(this).attr('data-cat').indexOf(customType) < 0) $(this).find('a').addClass('noshow');
-                else $(this).find('a').removeClass('noshow');
-
-            });
-        }
-
-        $container
-            .trigger('resize')
-            .masonry( 'reloadItems' )
-            .masonry( 'layout');
-     
-
-    });
 
 
 

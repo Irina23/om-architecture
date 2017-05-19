@@ -255,8 +255,8 @@ img {
     width: 33.3%;
     box-sizing: border-box;
     padding: 0 10px;
-    /*float: left;
-    -webkit-transition: all 0.35s;
+    /*float: left;*/
+    /*-webkit-transition: all 0.35s;
     transition: all 0.35s;*/ }
 
   #projects .item-project a{
